@@ -1,17 +1,16 @@
-public class Order_Agnostic_Binary_Search
+package Questions;
+
+public class Floor_question_Approach_2
 {
-    public static void main(String[] args)
-    {
-        /*
+    public static void main(String[] args) {
+         /*
         in this order of ascending and descending isn't given in the question
         and you yourself have to figure it out
         */
-//        int [] arr = {90,90,90,87,75,18,15,13,2,1};
-        int[] arr={1,4,12,14,34,55,65,78,85,333};
-        System.out.println(BinarySearch(arr,12));
-
+        int [] arr = {90,90,90,87,75,18,15,13,2,1};
+//        int[] arr={1,4,12,14,34,55,65,78,85,333};
+        System.out.println(BinarySearch(arr,14));
     }
-
     public static int BinarySearch(int[] arr, int target)
     {
         int start = 0;
@@ -32,7 +31,7 @@ public class Order_Agnostic_Binary_Search
             if(arr[middle]==target)
             {
                 //ans found
-                return middle;
+                return arr[middle];
             }
 
             //different :
@@ -59,11 +58,8 @@ public class Order_Agnostic_Binary_Search
 
             }
 
-
-
-
         }
-        return -1;
+        return arr[end];
 
     }
 }

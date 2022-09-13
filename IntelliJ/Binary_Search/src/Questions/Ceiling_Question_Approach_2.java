@@ -1,16 +1,13 @@
-public class Order_Agnostic_Binary_Search
-{
-    public static void main(String[] args)
-    {
-        /*
-        in this order of ascending and descending isn't given in the question
-        and you yourself have to figure it out
-        */
-//        int [] arr = {90,90,90,87,75,18,15,13,2,1};
-        int[] arr={1,4,12,14,34,55,65,78,85,333};
-        System.out.println(BinarySearch(arr,12));
+package Questions;
 
+public class Ceiling_Question_Approach_2 {
+    public static void main(String[] args) {
+        int[] arr = {1, 4, 12, 14, 34, 55, 65, 78, 85, 333};
+        System.out.println(BinarySearch(arr, 45));
     }
+    //binary search is the optimised way to search for any element
+    // implementing binary search algo
+
 
     public static int BinarySearch(int[] arr, int target)
     {
@@ -32,7 +29,7 @@ public class Order_Agnostic_Binary_Search
             if(arr[middle]==target)
             {
                 //ans found
-                return middle;
+                return arr[middle];
             }
 
             //different :
@@ -58,12 +55,8 @@ public class Order_Agnostic_Binary_Search
                 }
 
             }
-
-
-
-
         }
-        return -1;
-
+        return arr[start];
     }
+
 }
