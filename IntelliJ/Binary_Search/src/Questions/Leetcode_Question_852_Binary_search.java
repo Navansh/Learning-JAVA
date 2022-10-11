@@ -16,7 +16,7 @@ public class Leetcode_Question_852_Binary_search
         int start = 0;
         int end = arr.length - 1; //imp : -1 karna
 
-        while(start<=end)
+        while(start<end)
         {
             //find the middle element
 //            int middle = (start+end)/2;

@@ -7,7 +7,7 @@ public class Array_2D
     {
         Scanner in = new Scanner(System.in);
         int[][] arr = new int[3][3];
-
+        
         int[][] arr2 = {
                 {1,2}, //0 th index
                 {4,5,6}, //1st index

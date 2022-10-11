@@ -8,7 +8,7 @@ public class Order_Agnostic_Binary_Search
         */
 //        int [] arr = {90,90,90,87,75,18,15,13,2,1};
         int[] arr={1,4,12,14,34,55,65,78,85,333};
-        System.out.println(BinarySearch(arr,12));
+        System.out.println(BinarySearch(arr,190));
 
     }
 

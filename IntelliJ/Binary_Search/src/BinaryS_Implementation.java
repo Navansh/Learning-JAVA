@@ -3,9 +3,8 @@ public class BinaryS_Implementation {
     {
        //binary search is the optimised way to search for any element
         // implementing binary search algo
-        int[] arr={1,4,12,14,34,55,65,78,85,333};
+        int[] arr={1,4,12,14,34,55,65};
         System.out.println(BinarySearch(arr,14));
-
 
     }
     //function which return the index
