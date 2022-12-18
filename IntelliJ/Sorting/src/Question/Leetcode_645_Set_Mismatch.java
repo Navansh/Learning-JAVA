@@ -1,17 +1,20 @@
 package Question;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Leetcode_442_All_Duplicates_in_Array
+//https://leetcode.com/problems/set-mismatch/
+public class Leetcode_645_Set_Mismatch
 {
     public static void main(String[] args)
     {
-        int[] nums = {4,3,2,7,8,2,3,1};
-        System.out.println(findDuplicates(nums));
+        int[] nums = {1,2,2,4};
+        System.out.println(Arrays.toString(findDuplicates(nums)));
     }
-    public static List<Integer> findDuplicates(int[] nums) {
-        List<Integer> ans = new ArrayList<>();
+    public static int[] findDuplicates(int[] nums) {
+//        List<Integer> ans = new ArrayList<>();
+//        int[] arr2 = new int[45];
         int j = 0;
 //        for (int i = 0; i < nums.length; i++)
 //        //we will only move the i forwards when it is at its correct index
@@ -29,15 +32,20 @@ public class Leetcode_442_All_Duplicates_in_Array
             }
             else j++;
         }
+
+
+
         for (int i = 0; i < nums.length ; i++)
         //we want it to traverse the whole array and not leave the last element
         {
+            int correct_index = nums[i]-1;
             if (nums[i]!=i+1)
             {//i+1 should be the correct index ){
-                ans.add(nums[i]);
+                return new int[]{nums[i],i+1};
             }
         }
-        return ans;
+        return new int[]{-1,-1};
+
 
     }
 

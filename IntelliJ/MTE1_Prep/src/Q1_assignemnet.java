@@ -1,4 +1,3 @@
-
     class Mytime
     {
         int hours;
@@ -62,6 +61,7 @@
         }
 
         public static int CompareTo(Mytime other, Mytime other2)
+                //only static methods can be accessed by using class name
         {
             if(other.hours > other2.hours)
             {
@@ -139,6 +139,7 @@
             Mytime t1 = new Mytime(1,32,44);
             Mytime t2 = new Mytime(12,33,44);
             Mytime t3 = new Mytime(3);
+//            System.out.println();
             System.out.println(Mytime.CompareTo(t1,t2));
             System.out.println(t3.minutes);
             t2.displayTime();
