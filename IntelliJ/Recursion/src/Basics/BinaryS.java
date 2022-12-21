@@ -1,3 +1,5 @@
+package Basics;
+
 public class BinaryS
 {
     public static void main(String[] args) {
