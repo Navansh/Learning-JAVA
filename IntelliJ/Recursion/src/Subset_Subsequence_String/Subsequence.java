@@ -93,9 +93,8 @@ public class Subsequence
          //now these both Arraylists contain answers from both the halves of func calls
 //        hence add them now
         //
-
         left.addAll(right);
-        return left;  //        or right  as they both are same now
+        return left;  //
     }
 
     static void SubseqASCII(String processed,String unprocessed)
