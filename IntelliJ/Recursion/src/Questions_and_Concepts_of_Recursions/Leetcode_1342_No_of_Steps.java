@@ -1,4 +1,4 @@
-package Easy_Questions_and_Concepts;
+package Questions_and_Concepts_of_Recursions;
 
 public class Leetcode_1342_No_of_Steps {
     public static void main(String[] args) {

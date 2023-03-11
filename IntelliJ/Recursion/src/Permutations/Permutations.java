@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Permutations {
     public static void main(String[] args) {
 //        Permus("","abc");
-        ArrayList<String> ans = PermusArrayList("","abc");
-        System.out.println(ans);
+//        ArrayList<String> ans = PermusArrayList("","abc");
+//        System.out.println(ans);
+        System.out.println(PermutationCount("","abcdef"));
     }
+
     static void Permus(String processed, String unprocessed){
         if (unprocessed.isEmpty()){
             System.out.print(processed);
@@ -48,4 +50,22 @@ public class Permutations {
         return ans;
     }
 
+    static int PermutationCount(String processed, String unprocessed){
+        if (unprocessed.isEmpty()){
+            return 1;
+            //means 1 permutation found
+        }
+        int count = 0;
+        char ch = unprocessed.charAt(0);
+        //extract the char which we want to insert in different places of the processed
+        for (int i = 0; i < processed.length() + 1; i++) {
+            String first_part = processed.substring(0,i);
+            //in the substring method the (x,y), so y-> exclusive here, hence we get substring from x to y-1
+            String second_part = processed.substring(i,processed.length());
+            count = count +  PermutationCount(first_part+ch+second_part,unprocessed.substring(1));
+        }
+
+        return count;
+        //as this will contain the all sum of counts from all the function calls
+    }
 }

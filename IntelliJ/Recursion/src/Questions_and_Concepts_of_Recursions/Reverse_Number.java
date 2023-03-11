@@ -1,4 +1,4 @@
-package Easy_Questions_and_Concepts;
+package Questions_and_Concepts_of_Recursions;
 
 public class Reverse_Number
 {
