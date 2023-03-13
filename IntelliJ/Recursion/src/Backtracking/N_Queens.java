@@ -39,7 +39,7 @@ public class N_Queens {
         return count;
     }
 
-    private static boolean isSafe(boolean[][] board, int row, int col) {
+    static boolean isSafe(boolean[][] board, int row, int col) {
         //check vertical availability of queen
         for (int i = 0; i < row; i++) {
             if (board[i][col]) {
@@ -68,7 +68,7 @@ public class N_Queens {
         return true;
     }
 
-    private static void display(boolean[][] board) {
+    public static void display(boolean[][] board) {
         for (boolean[] row:board) {
             for (boolean element:row){
                 if (element){
