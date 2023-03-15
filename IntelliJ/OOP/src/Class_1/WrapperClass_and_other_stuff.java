@@ -1,6 +1,6 @@
 package Class_1;
 
-public class WrapperClassExample {
+public class WrapperClass_and_other_stuff {
     public static void main(String[] args) {
         int a = 10;
         Integer num = 10;
