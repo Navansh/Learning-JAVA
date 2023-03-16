@@ -1,0 +1,23 @@
+Can there be more than one main method in a Java Program
+August 16, 2014 4:29 pm | 1 Comment | crazyadmin
+Yes, you can have as many main methods as you like. You can have main methods with different signatures from main(String[]) which is called overloading, and the JVM will ignore those main methods.
+
+You can have one public static void main(String[] args) method in each class. Some people use those methods for testing. They can test the operation of each class individually. The JVM will only invoke the public static void main(String[] args) method in the class you name when you write java MyClass.
+
+[code lang="java"]
+public class TwoMain {
+public static void main(String args1[])
+{
+System.out.println("First main");
+
+}
+public static void main(String args2[])
+{
+System.out.println("Second main");
+
+}
+
+}
+[/code]
+
+Those two methods have the same signature. The only way to have two main methods is by having two different classes each with one main method. The name of the class you use to invoke the JVM (e.g. java Class1, java Class2) determines which main method is called.
