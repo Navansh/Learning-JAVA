@@ -8,6 +8,8 @@ public class Main {
         Car c1 = new Car();
         CdPlayer cd = new CdPlayer();
         cd.start();
+        Brake.brakeHard();
+        //calling a static method, by its interface name
         c1.acc();
         c1.start();
         c1.brake();

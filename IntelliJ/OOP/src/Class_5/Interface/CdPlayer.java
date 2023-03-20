@@ -1,6 +1,7 @@
 package Class_5.Interface;
 
 public class CdPlayer implements Media{
+    //
 
     @Override
     public void start() {
@@ -12,4 +13,5 @@ public class CdPlayer implements Media{
         System.out.println("Stopping Music");
 
     }
+    //for interface to interface inheritance use extends keyword
 }
