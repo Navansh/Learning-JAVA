@@ -15,8 +15,8 @@ public class Lambda_Functions {
 //        });
         //Lambda Function
 
-        Consumer<Integer> fun = (item) -> System.out.println(item*2);
-        arr.forEach(fun);
+//        Consumer<Integer> fun = (item) -> System.out.println(item*2);
+//        arr.forEach(fun);
         //because the forEach loop accepts a consumer type, so we first made one explicitly and then passed it
 
         //Lambda expressions are assigned to the variables that are of type interfaces because implementation is
@@ -26,8 +26,20 @@ public class Lambda_Functions {
         Operation product = (a,b) -> a*b;
         Operation subtract = (a,b) -> a-b;
         Operation divide = (a,b) -> a/b;
-        //we are storing this in a interface type(Operation) cz
+        //we are storing this in a interface type(Operation), and this provides body to the operation func call
 
+        Lambda_Functions myCalc = new Lambda_Functions();
+        int ans = myCalc.operate(5,3,sum);
+        System.out.println(ans);
+        System.out.println(myCalc.operate(5,3,product));
+        System.out.println(myCalc.operate(5,3,subtract));
+
+
+    }
+
+    private int operate(int a, int b, Operation op){
+        return op.operation(a,b);
+        //this calls an abstract method
     }
 
     int sum(int a,int b){
@@ -37,4 +49,5 @@ public class Lambda_Functions {
 
 interface Operation {
     int operation(int a,int b);
+    //which comes to here, and then searches its body according to type of Operation passed
 }
