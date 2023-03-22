@@ -19,7 +19,22 @@ public class Human implements Cloneable {
     }
 
     @Override
+//    protected Object clone() throws CloneNotSupportedException {
+//        //this is Shallow Copy
+//        return super.clone();
+//    }
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        //this is Deep Copy
+        Human twin = (Human)super.clone();
+        //this is actually shallow copy
+        //after doing shallow copy, we do steps to make different object
+
+        //make deep copy
+        twin.arr = new int[twin.arr.length];
+        for (int i = 0; i < twin.arr.length; i++) {
+            twin.arr[i] = this.arr[i];
+        }
+        return twin;
+
     }
 }
