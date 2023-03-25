@@ -23,6 +23,7 @@ public class Main {
         list.insertFirst(31);
         list.insertLast(45);
         list.display();
+
         list.displayReverse();
 
 
