@@ -46,6 +46,22 @@ public class LL {
 
     }
 
+    //insert using recursion
+    public void insertRec(int value, int index){
+        //insert value at index
+        head = insertRec(value,index, head);
+    }
+    private Node insertRec(int val, int index1, Node node){
+        if (index1==0){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+        index1 = index1 -1 ;
+        node.next = insertRec(val,index1,node.next);
+        return node;
+    }
+
     public Node findNode(int value) {
 //        returns the ref pointer to node at that particular index
         Node node = head;

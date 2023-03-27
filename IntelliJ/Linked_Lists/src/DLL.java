@@ -52,6 +52,34 @@ public class DLL {
         node.prev = temp;
 
     }
+    public void insertAfter(int after, int value){
+        //int value -> value of node that we want to insert after 'p' node
+        Node p = findNode(after);
+        if (p==null){
+            //means we weren't able to find a node with the passed value
+            System.out.println("Node doesn't exist");
+            return;
+        }
+        Node node = new Node(value);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if (node.next!=null){
+            node.next.prev= node;
+        }
+
+    }
+
+    private Node findNode(int value) {
+        Node node = head;
+        while(node!=null){
+            if (node.value == value){
+                return node ;
+            }
+            node = node.next;
+        }
+        return null;
+    }
 
     private class Node {
         int value;
