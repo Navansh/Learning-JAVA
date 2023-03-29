@@ -1,11 +1,50 @@
-public class LL {
+public class Reverse_LL {
+    //this is how we can reverse a LL
+    public static void main(String[] args) {
+
+    }
+}
+ class LL1 {
     private Node head;
     private Node tail;
     private int size;
 
-    public LL() {
+    public LL1() {
         this.size = 0;
     }
+
+     private void ReverseLL(LL1.Node node){
+        //this is using recursion
+         if (node==tail){
+             head = tail;
+             return;
+         }
+         ReverseLL(node.next);
+         //now it has set the tail as the head and we are moving outwards of the recursion calls now
+         tail.next = node;
+         tail = node;
+         tail.next = null;
+     }
+
+     private void reverseIterative(){
+        if (size<2){
+            return;
+        }
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while (present!=null){
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next!=null){
+                next = next.next;
+                //did the check as doing this may give null pointer exception at certain time
+            }
+        }
+        head = prev;
+     }
 
     public void insertLast(int val) {
         if (tail == null) {
@@ -162,3 +201,5 @@ public class LL {
 
 
 }
+
+
