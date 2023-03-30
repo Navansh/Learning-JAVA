@@ -48,7 +48,7 @@ public class Leetcode_92_Reverse_part_of_LL {
         }
 
         if (last!=null){
-            last.next = prev
+            last.next = prev;
         } else {
             head = prev;
         }
