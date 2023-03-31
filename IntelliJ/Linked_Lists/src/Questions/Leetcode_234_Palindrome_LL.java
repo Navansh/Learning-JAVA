@@ -12,7 +12,19 @@ public class Leetcode_234_Palindrome_LL {
         //now we are reversing the second half
         ListNode headSecond = reverseList(mid);
         ListNode reReverseHead = headSecond;
-        //will be required when we rereverse
+        //will be required when we rereverse, because headSecond is the var on which we'll iterate upon
+
+        //compare both the halves with their respective head
+        while (head!=null && headSecond != null){
+            if (head.val == headSecond.val){
+                head = head.next;
+                headSecond = headSecond.next;
+            }else{
+                return false;
+            }
+        }
+        reverseList(reReverseHead);
+        return true;
     }
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
