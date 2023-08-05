@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayList1
@@ -7,6 +8,7 @@ public class ArrayList1
 
         java.util.ArrayList<Integer> list = new java.util.ArrayList<>();
         //slower thn traditional array
+        ArrayList<Integer> listrr = new ArrayList<>();
 
         //taking input manually
 //        list.add(45);

@@ -2,11 +2,13 @@ package Questions;
 
 public class Ceiling_Question_Approach_2 {
     public static void main(String[] args) {
-        int[] arr = {1, 4, 12, 14, 34, 55, 65, 78, 85, 333};
+       // int[] arr = {1, 4, 12, 14, 34, 55, 65, 78, 85, 333};
+        int[] arr = {191,4,3,2,1};
         System.out.println(BinarySearch(arr, 45));
     }
     //binary search is the optimised way to search for any element
     // implementing binary search algo
+
 
 
     public static int BinarySearch(int[] arr, int target)
@@ -55,7 +57,7 @@ public class Ceiling_Question_Approach_2 {
                 }
 
             }
-        }
+        } 
         return arr[start];
     }
 

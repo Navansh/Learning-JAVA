@@ -27,9 +27,9 @@ public class StackCustImple {
         return true;
     }
 
-    public int pop() throws Exception {
+    public int pop() throws StackException {
         if (ptr == -1 ) {
-            throw  new Exception("Cannot pop from an Empty Stack");
+            throw  new StackException("Cannot pop from an Empty Stack");
         }
         int removed_item = data[ptr];
 //        ptr--;
@@ -38,9 +38,9 @@ public class StackCustImple {
         return data[ptr--];
     }
 
-    public int peek() throws Exception {
+    public int peek() throws StackException {
         if (ptr == -1 ) {
-            throw  new Exception("Cannot peek from an Empty Stack");
+            throw  new StackException("Cannot peek from an Empty Stack");
         }
         return data[ptr];
     }
