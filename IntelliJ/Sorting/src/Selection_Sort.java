@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-
-
 public class Selection_Sort
 {
     public static void main(String[] args)
@@ -18,7 +16,7 @@ public class Selection_Sort
             int last_index = arr.length -i - 1;
             //swap this index with
             int max = getMaxIndex(arr, 0, last_index);
-
+            //this is max's index and not the value
             Swap(arr,max,last_index);
         }
     }

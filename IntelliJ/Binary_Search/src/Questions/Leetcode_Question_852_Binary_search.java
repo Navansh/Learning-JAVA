@@ -11,7 +11,6 @@ public class Leetcode_Question_852_Binary_search
         //
     }
 
-
     public static int peakIndexInMountainArray(int[] arr)
     {
         int start = 0;
