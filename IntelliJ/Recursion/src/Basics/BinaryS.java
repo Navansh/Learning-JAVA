@@ -4,7 +4,7 @@ public class BinaryS
 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 43, 55, 455, 3321, 3322, 3324};
-        System.out.println(BinarySearch(arr,9,0,arr.length-1));
+        System.out.println(BinarySearch(arr,3,0,arr.length-1));
     }
   public static int BinarySearch(int[] arr, int target, int start,int end)
     {
