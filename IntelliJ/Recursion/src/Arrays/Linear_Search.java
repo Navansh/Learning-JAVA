@@ -40,7 +40,8 @@ public class Linear_Search
     }
     public static int FindIndexfromLast(int[] arr, int target, int index)
     {
-        if (index==-1) {
+        if (index==-1) // and not 0 ****
+        {
             return -1;
         }
         if (arr[index] == target)
@@ -72,7 +73,8 @@ public class Linear_Search
         //will give all the indexes in which a particular number is occurring
         //we'll add all the corresponding appearing indices to the Arraylist and print Arraylist at last
         //here index means the starting index from where we'll start searching
-        //all the list vars here are just ref vars who point to same object, hence if we change any the OG gets changed
+        //all the list vars here are just ref vars who point to same object,
+        // hence if we change any the OG(list) gets changed
         if (index==arr.length) {
             return list;
         }
@@ -85,11 +87,12 @@ public class Linear_Search
     }
     public static ArrayList<Integer> FindAllIndexes2(int[] arr, int target, int index)
     {
-        //VVI Concept
+        //return the list, but don't take it in the Argument
+        //VVI Concept, but not very optimized as it creates a new object on every func call
         //will give all the indexes in which a particular number is occurring
         //here index means the starting index from where we'll start searching
 
-        //we'll here create new Arraylist at every function call
+        //we'll here create new Arraylist at every function call,
         ArrayList<Integer> list = new ArrayList<>();
         if (index==arr.length) {
             return list;
@@ -103,7 +106,7 @@ public class Linear_Search
         ArrayList<Integer> ansfrombelowfunctioncalls = FindAllIndexes2(arr, target, index + 1);
 
         //now what we'll do is that whether this function call's arraylist has any ans in it's list, if yes then we'll
-        //add ansfrombelowfunctioncalls into our current function call Arraylist
+        //add "ansfrombelowfunctioncalls" into our current function call Arraylist
         list.addAll(ansfrombelowfunctioncalls);
 
         //now our list contains all the answers collectively till this current function call, hence return list
