@@ -33,7 +33,7 @@ public class Skip_a_character_or_String
         }
     }
 
-    //2nd method
+    //2nd method - with String return type, this is called method
     static String skip(String unprocessed,char skippu)
     {
         //base condition

@@ -23,10 +23,10 @@ public class Subset_Iterative_Sol
         //hence [2,3] is a list and so on.. so finally when we'll return the subset it will be a list of lists
 
         List<List<Integer>> outer = new ArrayList<>();
-
+        //this contains the list of subset lists like [ [1,2] , [2,3] .... ]
         outer.add(new ArrayList<>());
         //adding a new empty arraylist, to which we can start adding the elements of which we want to create subsets of
-
+        //this is the initial empty list upon which we'll start the left iteration, of adding
         for (int num : arr) {
             int size = outer.size();
             //here we calculate the size of outer, means how many lists it has, then utne hi hamein aur add karni hai
@@ -35,8 +35,11 @@ public class Subset_Iterative_Sol
                 //we get the i(th) list from the outer(which is a list of lists)
                 internal.add(num);
                 //add our number to the list, jiska hamein subsets banane hain
+                //take the new list and our number to that list : size number of times
                 outer.add(internal);
                 //and add that to the original list of lists
+                //as size was calculated before adding new lists to the outer, hence this loop won't run
+                //indefinitely
 
             }
         }
@@ -49,7 +52,8 @@ public class Subset_Iterative_Sol
         //creation of duplicate subsets which we don't want
 
         Arrays.sort(arr);
-        //so first we sort the array
+        //so first we sort the array, so that all the duplicates come together, only then our below algo to
+        //find the unique subsets will work
 
         List<List<Integer>> outer = new ArrayList<>();
 

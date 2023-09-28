@@ -7,17 +7,18 @@ public class Subsequence
     static ArrayList<String> listr = new ArrayList<>();
     //subsequence is for string and subsets is for arrays
     public static void main(String[] args) {
-//        Subseq("","aabbccdd");
+//        Subseq("","abc");
 //        Subseq1("","alan");
 //        System.out.println(listr);
 //        System.out.println(SubseqArraylist("","abcd"));
 
-//            System.out.println(Subsequer("","ab",listr));
-        System.out.println(SubseqArraylistASCII("","abc"));
+            System.out.println(Subsequer("","abc",listr));
+//        System.out.println(SubseqArraylistASCII("","abc"));
 
     }
 
     //add edge cases to ignore the empty strings
+    //1st
     static void Subseq(String processed,String unprocessed)
     {
         //so whenever the unprocessed is empty then return the processed
@@ -31,10 +32,14 @@ public class Subsequence
         char ch = unprocessed.charAt(0);
 
         Subseq(processed+ch,unprocessed.substring(1));
+        //processed + ch : creates a new object, as strings are immutable
+        //likewise unp.substring : creates a new string
         Subseq(processed,unprocessed.substring(1));
+
     }
 
         //here we are passing Arraylist as an argument
+    //2
     static ArrayList<String> Subsequer(String processed,String unprocessed,ArrayList<String> list)
     {
         //so whenever the unprocessed is empty then return the processed
@@ -46,9 +51,9 @@ public class Subsequence
         //now take the first char and make 2 recursion calls:- 1.)take it or 2.)ignore it
         char ch = unprocessed.charAt(0);
 
-        Subsequer(processed+ch,unprocessed.substring(1),list);
-        return Subsequer(processed,unprocessed.substring(1),list);
-
+        Subsequer(processed,unprocessed.substring(1),list);
+        return Subsequer(processed+ch,unprocessed.substring(1),list);
+        //w/o return function nhi maanega, otherwise yahaan par bhi return nhi karte
     }
 
     //storing in arraylist instead of printing answer, but Arraylist is not passed in arguments
@@ -77,6 +82,7 @@ public class Subsequence
     {
         //so whenever the unprocessed is empty then return the processed
         ArrayList<String> listerr = new ArrayList<>();
+        //*** this is created for every func call
         if (unprocessed.isEmpty())
         {
             listerr.add(processed);
