@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Binary_Search/Binary_Search.iml" filepath="$PROJECT_DIR$/Binary_Search/Binary_Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bitwise Operators_Maths for DSA/Bitwise Operators_Maths for DSA.iml" filepath="$PROJECT_DIR$/Bitwise Operators_Maths for DSA/Bitwise Operators_Maths for DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IntelliJ.iml" filepath="$PROJECT_DIR$/.idea/IntelliJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Learning/Learning.iml" filepath="$PROJECT_DIR$/Learning/Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Linear_Search/Linear_Search.iml" filepath="$PROJECT_DIR$/Linear_Search/Linear_Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Linked_Lists/Linked_Lists.iml" filepath="$PROJECT_DIR$/Linked_Lists/Linked_Lists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MTE1_Prep/MTE1_Prep.iml" filepath="$PROJECT_DIR$/MTE1_Prep/MTE1_Prep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods and Functions/Methods and Functions.iml" filepath="$PROJECT_DIR$/Methods and Functions/Methods and Functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Questions/Pattern_Questions.iml" filepath="$PROJECT_DIR$/Pattern_Questions/Pattern_Questions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Search_in_2D_Arrays/Search_in_2D_Arrays.iml" filepath="$PROJECT_DIR$/Search_in_2D_Arrays/Search_in_2D_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/Sorting/Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stacks_and_Queues/Stacks_and_Queues.iml" filepath="$PROJECT_DIR$/Stacks_and_Queues/Stacks_and_Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String and String Builder/String and String Builder.iml" filepath="$PROJECT_DIR$/String and String Builder/String and String Builder.iml" />
+    </modules>
+  </component>
+</project>
