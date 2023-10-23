@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Leetcode_17_Phone_pattern {
     public static void main(String[] args) {
-//        Pad("","12");
-        List<String> ans = PadReturnLeetcode("","23");
+//        Pad("","99");
+        List<String> ans = PadReturnLeetcode("","99");
         System.out.println(ans);
     }
 
@@ -22,6 +22,7 @@ public class Leetcode_17_Phone_pattern {
 
         for (int i = (digit - 1)*3 ; i < (digit*3); i++) {
             char ch = (char)('a' + i);
+            //as we are doing wrt to 'a', and adding the range to it
             Pad(processed+ch,unprocessed.substring(1));
         }
 
