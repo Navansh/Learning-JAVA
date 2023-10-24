@@ -25,7 +25,7 @@ public class Maze_Problem {
         return (left + right);
     }
     static void path(String processed,int row,int column){
-        if (row==1 && column ==1 ){
+        if (row==1 && column ==1){
             System.out.println(processed);
             return;
         }
@@ -109,7 +109,7 @@ public class Maze_Problem {
     }
     static void pathwithAll(String processed,boolean[][] maze,int row,int column){
 
-        //this method won't find answer, detailed explaination in Notebook#2
+        //this method won't find answer, detailed explanation in Notebook#2
 
 
 
