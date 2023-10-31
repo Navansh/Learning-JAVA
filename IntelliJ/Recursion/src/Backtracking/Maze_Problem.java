@@ -98,7 +98,8 @@ public class Maze_Problem {
             // until it hasn't reached the final block, and it will reached when row is < 2(for a 3x3 matrix)
             // , means at most 1, cz
 //            in the inside function call we are passing row + 1, so we know it has moved from 1 to 2(for a 3x3 matrix)
-//            , which is its last position
+//            , which is its last position, for a row, so now either the return condition will hit or
+//            it will move columnwise
             pathwithObstacles(processed+'D',maze,row+1,column);
         }
         if (column < maze[0].length - 1 ){
@@ -109,7 +110,10 @@ public class Maze_Problem {
     }
     static void pathwithAll(String processed,boolean[][] maze,int row,int column){
 
-        //this method won't find answer, detailed explanation in Notebook#2
+        //this method won't find answer using the techniques used in the above question
+        // , detailed explanation in Notebook#2
+        //hence that's why we use BackTracking
+
 
 
 
@@ -117,7 +121,7 @@ public class Maze_Problem {
 
         //this method is slightly different from other method disc prviously, as there we started from 3,3 and target
         // was (0,0), but here we start from (0,0) and target is (3,3) and hence we move (row + 1) and (col + 1)
-        if (row == maze.length -1 && column == maze[0].length - 1 ){
+        if (row == maze.length -1 && column == maze[0].length - 1 ) {
             //because as this is a boolean matrix so we can't just simply put r ==1 and c==1, so we just compare it
             //to the co-ordinates of the last cell in the matrix
             System.out.println(processed);

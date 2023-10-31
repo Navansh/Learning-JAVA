@@ -17,8 +17,9 @@ public class Maze_All_Paths {
     }
     static void pathwithAll(String processed,boolean[][] maze,int row,int column){
 
-        //this method is slightly different from other method disc prviously, as there we started from 3,3 and target
-        // was (0,0), but here we start from (0,0) and target is (3,3) and hence we move (row + 1) and (col + 1)
+        //this method is slightly different from other method disc previously, as there we started from 3,3 ( 1 indexed )
+        // and target was (0,0), but here we start from (0,0) and target is (2,2) and
+        // hence we move (row + 1) and (col + 1)
         if (row == maze.length -1 && column == maze[0].length - 1 ){
             //because as this is a boolean matrix so we can't just simply put r ==1 and c==1, so we just compare it
             //to the co-ordinates of the last cell in the matrix

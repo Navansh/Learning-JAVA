@@ -3,8 +3,9 @@ package Backtracking;
 public class N_Queens {
     public static void main(String[] args) {
         //true means a queen is placed there
-        int n = 1;
-         boolean[][] board = new boolean[n][n];
+        int n = 70;
+        boolean[][] board = new boolean[n][n];
+        //it is initialized with false
         System.out.println(queens(board,0));
 
     }
@@ -25,6 +26,7 @@ public class N_Queens {
             //place the queen if it is safe
             if (isSafe(board,row,col)){
                 board[row][col] = true;
+                //means if the queen is placed -> true, if not then false ( The default )
                 //hence this row is placed now try to see for the below rows
                 count = count + queens(board,row+1);
                 board[row][col] = false;
@@ -37,6 +39,7 @@ public class N_Queens {
         }
 
         return count;
+        //this count is just the additional things which tells, how many ways we can place the queens
     }
 
     static boolean isSafe(boolean[][] board, int row, int col) {
