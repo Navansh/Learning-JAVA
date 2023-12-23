@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        LL1 list = new LL1();
-
+//        LL1 list = new LL1();
+        LL list = new LL();
         list.insertFirst(34);
         list.insertFirst(32);
         list.insertFirst(31);

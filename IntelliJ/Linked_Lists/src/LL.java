@@ -52,7 +52,7 @@ public class LL {
         head = insertRec(value,index, head);
     }
     private Node insertRec(int val, int index1, Node node){
-        if (index1==0){
+        if (index1==0) {
             Node temp = new Node(val,node);
             size++;
             return temp;

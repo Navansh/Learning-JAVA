@@ -60,9 +60,9 @@ public class L779 {
         double mask = (1 << length) - 1; // Create a mask with all 1s based on the input length
 
         double originalNumber = Double.parseDouble(binaryNumber + '0');
-        double flippedNumber = originalNumber ^ mask;
+//        double flippedNumber = originalNumber ^ mask;
 
-        return Integer.toBinaryString(flippedNumber);
+        return Integer.toBinaryString(1);
     }
 
     public static String flipperThree(String binaryNumber){

@@ -2,13 +2,13 @@ package Questions;
 
 import java.util.List;
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
+//class ListNode {
+//    int val;
+//    ListNode next;
+//    ListNode() {}
+//    ListNode(int val) { this.val = val; }
+//    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//}
 
 public class Leetcode_92_Reverse_part_of_LL {
     public ListNode reverseBetween(ListNode head, int left, int right) {
@@ -24,7 +24,7 @@ public class Leetcode_92_Reverse_part_of_LL {
         ListNode prev = null;
         for (int i = 0; present!=null && i < left-1; i++) {
             prev = present;
-            present = present.next;
+            present = present.next; 
         }
         //hence by the time this loop ends, present will be at left's  position and prev would at present-1
         //hence we store the location of prev
@@ -47,9 +47,11 @@ public class Leetcode_92_Reverse_part_of_LL {
                 }
         }
 
+        //case when there is difference between the starting position and the left and right indices
         if (last!=null){
             last.next = prev;
         } else {
+            //case when you are reversing from start
             head = prev;
         }
 

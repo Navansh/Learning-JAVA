@@ -1,5 +1,8 @@
 package Questions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Length_of_a_cycle {
     public int LengthCycle(ListNode head) {
         ListNode fast = head;
@@ -22,6 +25,7 @@ public class Length_of_a_cycle {
 
         return 0;
         //if cycle is not present return 0
+
 
     }
     public static void main(String[] args) {

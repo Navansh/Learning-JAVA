@@ -15,6 +15,7 @@ public class GFG_Reverse_Alternate_K_Grp {
         ListNode prev = null;
 
         while (present!=null){
+            //(while condition changed)
             //hence we store the location of prev
             ListNode last = prev;
             ListNode newEnd = present;
@@ -45,7 +46,7 @@ public class GFG_Reverse_Alternate_K_Grp {
             }
 
             newEnd.next = present;
-            //skip the k nodes
+            //skip the k nodes ( different here )
             for (int i = 0; present!=null && i < k; i++) {
                 prev = present;
                 present = present.next;

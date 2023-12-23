@@ -20,6 +20,7 @@ public class Reverse_LL {
              return;
          }
          ReverseLL(node.next);
+         //this will keep hitting until the base condition is met
          //now it has set the tail as the head and we are moving outwards of the recursion calls now
          tail.next = node;
          tail = node;

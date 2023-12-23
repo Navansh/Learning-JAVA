@@ -27,6 +27,10 @@ public class DynamicStack extends StackCustImple{
         //and the temp will also be removed as it will go out of scope
         //this all step was to make sure the Stack new runs out of space
 
+        if(isFull()) {
+            System.out.println("Dance");
+        }
+
         //Pushing part
         //at this point we know that the array is not full
         return super.push(item);

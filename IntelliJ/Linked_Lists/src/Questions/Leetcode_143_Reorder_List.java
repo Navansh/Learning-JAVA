@@ -1,7 +1,27 @@
 package Questions;
 
+import java.util.LinkedList;
+
 public class Leetcode_143_Reorder_List {
-    public void reorderList(ListNode head) {
+    public static void main(String[] args) {
+
+
+    }
+
+    static class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+
+    public static void insertFirst(int val, ListNode head) {
+        ListNode node = new ListNode(val);
+        node.next = head;
+        head = node;
+    }
+    public static void reorderList(ListNode head) {
         if (head==null || head.next == null){
             return;
         }
@@ -11,7 +31,7 @@ public class Leetcode_143_Reorder_List {
         ListNode headSecond = reverseList(mid);
 
         //rearrange the LL now
-        while (headFirst!=null&&headSecond!=null){
+        while (headFirst!=null&&headSecond!=null) {
             ListNode temp = headFirst.next;
             headFirst.next = headSecond;
             headFirst = temp;

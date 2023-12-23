@@ -9,7 +9,7 @@ public class StackCustImple {
         //here use the default size
         this(DEFAULT_SIZE);
         //hence it will the constructor which takes in the integer argument
-        //***Special Use Case of this
+        //***Special Use Case of this***
     }
     public StackCustImple(int size) {
         this.data = new int[size];
@@ -31,7 +31,7 @@ public class StackCustImple {
         if (ptr == -1 ) {
             throw  new StackException("Cannot pop from an Empty Stack");
         }
-        int removed_item = data[ptr];
+//        int removed_item = data[ptr];
 //        ptr--;
 //        return  removed_item;
         //or we can do
@@ -43,6 +43,15 @@ public class StackCustImple {
             throw  new StackException("Cannot peek from an Empty Stack");
         }
         return data[ptr];
+    }
+
+    public boolean isFull() {
+        if (ptr == data.length - 1) {
+            System.out.println("Stack is full, insertion not allowed");
+            return true;
+        }
+
+        return false;
     }
 
 

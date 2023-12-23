@@ -8,20 +8,22 @@ public class LL_Bubble_Sort {
     }
 
     private void BubbleSort(int row, int col){
-        if(row==0){
+        //initially it is sent with (size - 1, 0)
+        if(row==0) {
             return;
         }
-        if (col<row){
+        if (col<row) {
             Node first = findNode(col);
             Node second = findNode(col+1);
 
-            if (first.value> second.value){
+            if (first.value > second.value){
                 //swap
                 if (first==head){
                     head = second;
                     first.next = second.next;
                     second.next = first;
                 } else if (second==tail) {
+                    //if the second is the tail
                     Node prev = findNode(col-1);
                     //as col is the current value you are at, hence first will be at value col, second at value col +1
                     prev.next = second;
@@ -36,7 +38,7 @@ public class LL_Bubble_Sort {
                 }
             }
             BubbleSort(row,col+1);
-        }else {
+        } else {
             BubbleSort(row-1,0);
         }
 

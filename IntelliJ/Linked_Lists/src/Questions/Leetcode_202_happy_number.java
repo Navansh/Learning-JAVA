@@ -1,7 +1,12 @@
 package Questions;
 
 public class Leetcode_202_happy_number {
-    public boolean isHappy(int n){
+
+    public static void main(String[] args) {
+        int n = 2;
+        System.out.println(isHappy(n));
+    }
+    public static boolean isHappy(int n){
         int slow = n;
         int fast = n;
 
@@ -22,7 +27,7 @@ public class Leetcode_202_happy_number {
         return false;
 
     }
-    private int findSquare(int number){
+    private static int findSquare(int number){
         int ans = 0;
         while (number>0){
             int rem = number%10;
