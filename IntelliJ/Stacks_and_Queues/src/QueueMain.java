@@ -1,6 +1,11 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class QueueMain {
     public static void main(String[] args) throws Exception {
 //        CustomQueue queuer = new CustomQueue(5);
+        Queue<Integer> qi = new LinkedList<>();
+
 //        queuer.insert(45);
 //        queuer.insert(44);
 //        queuer.insert(43);
