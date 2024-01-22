@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class twoSum {
     public static void main(String[] args) {
         int[] arr = { 4, 7, -4, 2, 2, 2, 3, -5, -3, 9, -4, 9, -7, 7, -1, 9, 9, 4, 1, -4, -2, 3, -3, -5, 4, -7, 7, 9, -4, 4, -8 };
+
         int b = -3;
 
         System.out.println(Arrays.toString(twoSum(arr,b)));
@@ -80,6 +81,8 @@ public class twoSum {
 
         return new int[2];
     }
+
+
 
     private static int findIndex(int[] arr, int b) {
         for (int i = 0; i < arr.length; i++) {
