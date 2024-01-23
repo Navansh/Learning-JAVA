@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/Sorting/Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stacks_and_Queues/Stacks_and_Queues.iml" filepath="$PROJECT_DIR$/Stacks_and_Queues/Stacks_and_Queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/String and String Builder/String and String Builder.iml" filepath="$PROJECT_DIR$/String and String Builder/String and String Builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trees/Trees.iml" filepath="$PROJECT_DIR$/Trees/Trees.iml" />
     </modules>
   </component>
 </project>
