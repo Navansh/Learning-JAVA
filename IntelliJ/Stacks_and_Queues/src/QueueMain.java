@@ -19,15 +19,26 @@ public class QueueMain {
 //        queuer.display();
 
         CircularQueue q = new CircularQueue(5);
-        q.insert(5);
-        q.insert(4);
-        q.insert(3);
-        q.insert(2);
-        q.insert(1);
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(5);
+        queue.add(4);
+        queue.add(3);
+        queue.add(2);
+        queue.add(1);
 
-        q.display();
-        q.remove();
-        q.display();
+        for (int i = 0; i < queue.size() ; i++) {
+            System.out.println(queue.remove());
+        }
+
+        //this will not print all the elements of queue as q.size() will also dynamically
+        //update and somehwere maybe the condition i < queue.size() may not hold true
+        //even though queue has more elements to remove
+
+        //hence we use queue.isEmpty() and a while loop
+
+//        q.display();
+//        q.remove();
+//        q.display();
 
     }
 }

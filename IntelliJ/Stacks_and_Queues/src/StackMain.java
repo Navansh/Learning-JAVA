@@ -32,15 +32,16 @@ public class StackMain {
         stackop.push(42);
         stackop.push(43);
 
+
         System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
-        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
+//        System.out.println(stackop.pop());
 
 
     }
