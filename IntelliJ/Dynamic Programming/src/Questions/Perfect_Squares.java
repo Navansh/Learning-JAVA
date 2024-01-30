@@ -8,7 +8,7 @@ public class Perfect_Squares {
 //       Given an integer n, return the least number of perfect square numbers that sum to n.
 //        System.out.println(perfectSquaresWithoutDP(556));
 //        System.out.println(perfectSquaresWithDP(556));
-        System.out.println(printAllPerfectSquares(12));
+        System.out.println(printAllPerfectSquares(6));
     }
 
     public static int perfectSquaresWithoutDP(int num) {
@@ -87,10 +87,11 @@ public class Perfect_Squares {
             //depending upon the choices we have for the number of perfect
             //square number present less than equal to num
             int beforeSmaller = smallest;
-            int temp = dpHelper((num - i*i), dp);
+            int temp = helperArralst(listerr,dp,(num - i*i));
             smallest = Math.min(smallest, temp);
             if(beforeSmaller != smallest) {
                 //then this is the ans still
+                listerr.add(-1);
                 listerr.set(index, i * i);
             }
         }
