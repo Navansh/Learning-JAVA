@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 public class Cherry_Pickup {
     public static void main(String[] args) {
+        int[][] grid = {
+                {0,1,-1},
+                {1,0,-1},
+                {1,1,1}
+        };
 
+        System.out.println(cherryPickupSingle(grid));
     }
 
     public int cherryPickup(int[][] grid) {
@@ -89,7 +95,7 @@ public class Cherry_Pickup {
 
     }
 
-    public int cherryPickupSingle(int[][] grid) {
+    public static int cherryPickupSingle(int[][] grid) {
         int[][] dp = new int[grid.length][grid[0].length];
         int[][] dp2 = new int[grid.length][grid[0].length];
         for (int i = 0; i < grid.length; i++) {
@@ -111,7 +117,7 @@ public class Cherry_Pickup {
         return ans1 + ans2;
     }
 
-    private int cherryHelperSingle(int[][] dp, int[][] grid, int row1, int col1) {
+    private static int cherryHelperSingle(int[][] dp, int[][] grid, int row1, int col1) {
         //this is the base case1
         if(row1 >= grid.length || col1 >= grid.length) {
             return Integer.MIN_VALUE;
