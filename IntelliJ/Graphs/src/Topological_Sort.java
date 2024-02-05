@@ -38,7 +38,7 @@ public class Topological_Sort {
 
         while(!q.isEmpty()){
 
-            int node=q.poll();
+            int node=q.remove();
             topoAns[i++]= node;
 
             for(int v: graph.get(node)){
