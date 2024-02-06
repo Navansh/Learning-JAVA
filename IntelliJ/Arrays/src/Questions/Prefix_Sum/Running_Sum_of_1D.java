@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Prefix_Sum;
 
 import java.util.Stack;
 

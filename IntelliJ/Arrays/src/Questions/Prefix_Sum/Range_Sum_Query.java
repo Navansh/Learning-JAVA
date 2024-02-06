@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Prefix_Sum;
 
 public class Range_Sum_Query {
     public static void main(String[] args) {

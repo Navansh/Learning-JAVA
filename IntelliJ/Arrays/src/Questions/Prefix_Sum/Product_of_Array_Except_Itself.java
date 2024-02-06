@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Prefix_Sum;
 
 public class Product_of_Array_Except_Itself {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Prefix_Sum;
 
 public class Find_Pivot_Index {
     public static void main(String[] args) {
