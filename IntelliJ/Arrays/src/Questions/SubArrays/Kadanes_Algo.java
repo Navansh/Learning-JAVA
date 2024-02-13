@@ -2,7 +2,7 @@ package Questions.SubArrays;
 
 public class Kadanes_Algo {
     public static void main(String[] args) {
-        //used to find the maximum subArray
+        //used to find the maximum subArray sum
 
     }
 
