@@ -37,7 +37,7 @@ class NumMatrix {
 
                 //now traverse each cell of a single col in each row
                 //and calculate the colwise prefixSum
-                pSum[j][i] = pSum[j - 1][i] + matrix[j][i];
+                pSum[j][i] = pSum[j - 1][i] + pSum[j][i];
 
             }
         }
