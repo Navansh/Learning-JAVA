@@ -28,18 +28,13 @@ public class Max_Chunks_to_Make_Sorted2 {
         }
 
         int chunks = 0;
-        int vars = -1;
 
         //now run a loop and check 
         for (int i = 0; i < arr.length - 1; i++) {
             if(maxNumber[i] <= minNumber[i + 1]) {
-                chunks++;
-                vars = i;
-            }
-        }
 
-        if(vars == -1) {
-            return 1;
+                chunks++;
+            }
         }
 
         //check if the element at the last index is at its correct place or not
@@ -50,6 +45,10 @@ public class Max_Chunks_to_Make_Sorted2 {
         //when the last elements forms a chunk with prev ele ; in that case also
         //out loop will give only the chunks which are not going till the last index
         //and we are separately handling single case : ie 5,4,3,2,1
+
+        //or in other words we say, that you will always get a chunk on right hand side
+        //hence in short we are comparing the max of the last index, to the +infinity
+
 
     }
 
