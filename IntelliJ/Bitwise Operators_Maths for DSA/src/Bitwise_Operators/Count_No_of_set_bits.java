@@ -28,4 +28,17 @@ public class Count_No_of_set_bits
         return count;
     }
 
+    private static int SetBitsinNoAlternate(int N) {
+        //check the LSB and then do a right shift and check the LSB again
+        int count = 0;
+        while(N > 0) {
+            if((N & 1) == 1) {
+                count++;
+            }
+            N = N >> 1;
+        }
+
+        return count;
+    }
+
 }
