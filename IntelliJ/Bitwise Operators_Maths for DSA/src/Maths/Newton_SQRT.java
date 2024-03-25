@@ -3,7 +3,7 @@ package Maths;
 public class Newton_SQRT
 {
     public static void main(String[] args) {
-        System.out.println(FindSqrt(40));
+        System.out.println(FindSqrt(16));
     }
     static double FindSqrt(double n){
         double x = n;
