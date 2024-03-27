@@ -7,12 +7,28 @@ public class Insertion_Sort
     {
 //        int[] arr = {1,2,4,5,4,-1,0};
         int[] arr = {1,536,43534,452,2,3,4 };
-//         InsertionSort(arr);
-         Arrays.sort(arr);
+         InsertionSort2(arr);
+//         Arrays.sort(arr);
 
 
         System.out.println(Arrays.toString(arr));
 
+    }
+
+    public static void InsertionSort2(int[] arr) {
+        //can also be done this way, when we do
+        for (int i = 1; i < arr.length; i++) {
+            //we don't need to do it for i = 0 as that is already sorted
+            //do the insertion step
+            for (int j = i - 1; j >= 0 ; j--) {
+                if(arr[j] > arr[j + 1]) {
+                    //swap them
+                    Swap(arr, j, j + 1);
+                } else {
+                    break;
+                }
+            }
+        }
     }
 
     public static void InsertionSort(int[] arr)

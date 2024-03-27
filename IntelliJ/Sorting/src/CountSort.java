@@ -78,6 +78,7 @@ public class CountSort {
         //no of times
         int k = 0;
         for (int i = 0; i < count.length; i++) {
+            //i < count.length or i <= max these both are correct
             for (int j = 0; j < count[i]; j++) {
                 arr[k] = i;
                 k++;
