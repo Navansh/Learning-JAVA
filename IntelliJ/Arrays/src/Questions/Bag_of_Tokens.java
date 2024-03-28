@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Bag_of_Tokens {
     public static void main(String[] args) {
-        System.out.println(bagOfTokensScore());
+//        System.out.println(bagOfTokensScore());
     }
 
     public static int bagOfTokensScore(int[] tokens, int power) {
