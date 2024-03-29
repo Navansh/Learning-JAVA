@@ -11,6 +11,31 @@ public class twoSum {
 
         System.out.println(Arrays.toString(twoSum(arr,b)));
     }
+
+    public static boolean twoSumSorted(int[] arr, int k) {
+        //if not sorted then you can sort it in O(nlogn) TC
+        //Same 2 Sum ques, but the given array is sorted
+        //hence we can optimize our algo further to O(N)
+        //and space to O(1)
+
+        ////and we return if the pair of 2 sum is possible or not in the arr
+        int i = 0;
+        int j = arr.length - 1;
+
+        while (i < j) {
+            if(arr[i] + arr[j] == k) {
+                return true;
+            } else if (arr[i] + arr[j] < k) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+
+        //if still doing all of this we don't find the pair, then it is not possible
+        return false;
+
+    }
     public static int[] twoSum(final int[] arr, int B) {
         HashMap<Integer, Integer> hmap = new HashMap<>();
 //        int[] ans = new int[2];

@@ -19,10 +19,11 @@ public class Print_all_Subsequence {
 
         //can also print like
         for(List<Integer> li : lists) {
+            System.out.print("{ ");
             for(int i : li) {
                 System.out.print(i + " ");
             }
-            System.out.println();
+            System.out.println('}');
         }
     }
 
