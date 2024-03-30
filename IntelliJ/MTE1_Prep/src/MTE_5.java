@@ -1,5 +1,3 @@
-package Questions;
-
 public class MTE_5 {
     public static void main(String[] args) {
         int[] arr = {0,1,2,4,5,6};
