@@ -15,7 +15,7 @@ public class Palindrome_or_not {
     {
         //first convert string to lower case
         check = check.toLowerCase();
-        if (check ==null || check.length()==0)
+        if (check ==null || check.isEmpty())
         {
             return true;
         }

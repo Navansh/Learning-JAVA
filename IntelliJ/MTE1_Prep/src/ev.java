@@ -1,5 +1,3 @@
-package Questions;
-
 public class ev {
     public static void main(String[] args) {
         byte b = 1 ;

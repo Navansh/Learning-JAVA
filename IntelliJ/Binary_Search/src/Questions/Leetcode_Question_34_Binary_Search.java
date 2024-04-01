@@ -6,7 +6,7 @@ public class Leetcode_Question_34_Binary_Search
 {
     public static void main(String[] args) {
         int[] nums = {5,7,7,8,8,10};
-        int target = 4;
+        int target = 7;
         int[] ans = searchRange(nums, target);
         System.out.println(Arrays.toString(ans));
 
