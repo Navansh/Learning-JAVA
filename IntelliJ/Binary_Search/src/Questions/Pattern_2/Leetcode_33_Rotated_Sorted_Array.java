@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Pattern_2;
 //https://leetcode.com/problems/search-in-rotated-sorted-array/
 public class Leetcode_33_Rotated_Sorted_Array
 {
@@ -8,6 +8,47 @@ public class Leetcode_33_Rotated_Sorted_Array
         int target = 3;
 
         System.out.println(search(nums,target));
+    }
+
+    public static int search2(int[] nums, int target) {
+        //this is another method for finding the answer without finding the pivot
+
+        //first we define our initial searching space
+        int lo = 0;
+        int hi = nums.length - 1;
+
+        while (lo <= hi) {
+            int mid = lo + (hi - lo)/2 ;
+
+            //now check
+            if(nums[mid] == target) {
+                return mid;
+            } else if(nums[mid] <= nums[hi]) {
+                //means that we're on the right side of the array
+                //hence we can say the part [mid - hi] is sorted
+                //now check if our target lies in this segment
+                if(target >= nums[mid] && target <= nums[hi]) {
+                    //so apply BS here
+                    //and reject the other part
+                    lo = mid + 1;
+                } else {
+                    //if this is not the case, then move left side
+                    hi = mid - 1;
+                }
+
+            } else {
+                //we're on the left side of the array
+                //hence we can say that the part [lo - mid ] is sorted
+                if(target >= nums[lo] && target <= nums[mid]) {
+                    //then find here and discard the right part
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            }
+        }
+
+        return -1;
     }
     public static int search(int[] nums, int target)
     {
@@ -74,20 +115,19 @@ public class Leetcode_33_Rotated_Sorted_Array
              * hence it may give you some error
              * Hence a better way to find mid will be */
             int middle = start + (end - start)/2;
-            if (arr[middle]>target)
-            {
+
+            if (arr[middle]>target) {
                 end = middle -1;
             }
-            else if (arr[middle]<target)
-            {
+            else if (arr[middle]<target) {
                 start = middle + 1;
             }
-            else
-            {
+            else {
                 //ans found
                 return middle;
             }
         }
+
         return -1;
 
     }

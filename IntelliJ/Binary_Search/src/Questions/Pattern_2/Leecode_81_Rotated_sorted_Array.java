@@ -1,14 +1,67 @@
-package Questions;
+package Questions.Pattern_2;
 
 public class Leecode_81_Rotated_sorted_Array
 {
     //this comes with a twist that the elements in the array may be duplicate
     public static void main(String[] args)
     {
-        int[] nums = {1,0,1,1};
-        int target = 0;
+        //https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
+        int[] nums = {4,4,4,4,4,4,0,1,1,4};
+        int target = 1;
 
-        System.out.println(search(nums,target));
+        System.out.println(search2(nums,target));
+    }
+
+    public static boolean search2(int[] nums, int target) {
+        //this is another method for finding the answer without finding the pivot
+
+        //first we define our initial searching space
+        int lo = 0;
+        int hi = nums.length - 1;
+
+        while (lo <= hi) {
+            int mid = lo + (hi - lo)/2 ;
+
+            //now check
+            if(nums[mid] == target) {
+                return true;
+            }
+            if(nums[lo] == nums[mid] && nums[mid] == nums[hi]) {
+                //if this is the case then we're stuck with a duplicate ele
+                //and hence we're unable to decide whether the right part is sorted
+                //or the left part
+                lo++;
+                hi--;
+            } else if(nums[mid] <= nums[hi]) {
+                //"else if" because maybe doing the above operation of lo++ and hi--
+                // things may go
+                //out of bound, so we do one iteration and check lo <= hi
+
+                //means that we're on the right side of the array
+                //hence we can say the part [mid - hi] is sorted
+                //now check if our target lies in this segment
+                if(target >= nums[mid] && target <= nums[hi]) {
+                    //so apply BS here
+                    //and reject the other part
+                    lo = mid + 1;
+                } else {
+                    //if this is not the case, then move left side
+                    hi = mid - 1;
+                }
+
+            } else {
+                //we're on the left side of the array
+                //hence we can say that the part [lo - mid ] is sorted
+                if(target >= nums[lo] && target <= nums[mid]) {
+                    //then find here and discard the right part
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            }
+        }
+
+        return false;
     }
     public static boolean search(int[] nums, int target)
     {

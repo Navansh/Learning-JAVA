@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Pattern_2;
 
 public class Rotation_Count_Rotated_Array
 {

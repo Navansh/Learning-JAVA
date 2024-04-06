@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Unsorted_Array;
 
 public class Find_Unique_Ele {
     public static void main(String[] args) {

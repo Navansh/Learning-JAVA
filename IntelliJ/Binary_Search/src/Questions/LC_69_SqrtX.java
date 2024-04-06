@@ -11,18 +11,25 @@ public class LC_69_SqrtX {
         //we take numbers from n and find its sqrt
 
         //now search for sqrt in this
-        int low = 0;
-        int high = n;
-        int ans = 0;
+        if(n == 1) {
+            return 1;
+        }
+
+        //now search for sqrt in this
+        long low = 0;
+        long high = n;
+        long ans = 0;
+
+        //long as mid * mid may overflow for int
 
         //we don't really need to create an array for this
 
         while (low <= high) {
 
-            int mid = low + (high - low)/2;
+            long mid = low + (high - low)/2;
 
             if(mid*mid == n) {
-                return mid;
+                return (int)mid;
             } else if(mid * mid< n) {
                 ans = mid;
                 low = mid + 1;
@@ -31,6 +38,7 @@ public class LC_69_SqrtX {
             }
         }
 
-        return ans;
+        return (int)ans;
+
     }
 }

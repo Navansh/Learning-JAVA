@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Pattern_2;
 
 public class Leetcode_81_Different {
     public static boolean search(int[] nums, int target) {
@@ -78,6 +78,7 @@ public class Leetcode_81_Different {
     }
 
     public static void main(String[] args) {
+        //https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
         int[] nums = {1,0,1,1,1};
         int target = 0;
         boolean ans = search(nums, target);

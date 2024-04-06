@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Unsorted_Array;
 
 public class LC_162_Find_Peak_Ele {
     public static void main(String[] args) {
