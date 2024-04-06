@@ -36,6 +36,8 @@ public class Leecode_81_Rotated_sorted_Array
                 //"else if" because maybe doing the above operation of lo++ and hi--
                 // things may go
                 //out of bound, so we do one iteration and check lo <= hi
+                //let's say when there is just one element
+                //or in this case : [1,3,5]
 
                 //means that we're on the right side of the array
                 //hence we can say the part [mid - hi] is sorted
