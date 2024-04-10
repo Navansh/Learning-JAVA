@@ -57,7 +57,7 @@ public class LC_1544 {
             sbldr.append(stacker.pop());
         }
 
-        sbldr.toString();
+        return sbldr.toString();
     }
 
     public String makeGoodCorrect(String s) {

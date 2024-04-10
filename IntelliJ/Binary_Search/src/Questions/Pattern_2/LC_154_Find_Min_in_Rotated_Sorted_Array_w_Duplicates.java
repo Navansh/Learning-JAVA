@@ -1,5 +1,8 @@
 package Questions.Pattern_2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LC_154_Find_Min_in_Rotated_Sorted_Array_w_Duplicates {
     public static void main(String[] args) {
         //https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
@@ -9,6 +12,10 @@ public class LC_154_Find_Min_in_Rotated_Sorted_Array_w_Duplicates {
     public static int findMin(int[] nums) {
         int lo = 0;
         int hi = nums.length - 1;
+
+        List<Integer> listerr = new ArrayList<>();
+
+
 
         int potential_ans = nums[0];
 
