@@ -82,5 +82,12 @@ class kStacksSingleArray {
 
         return arr[index];
     }
-    public int
+    public int peek(int m) {
+        //m :-> stack number
+        if(top[m-1] == -1) {
+            return -1;
+        }
+
+        return arr[top[m-1]];
+    }
 }
