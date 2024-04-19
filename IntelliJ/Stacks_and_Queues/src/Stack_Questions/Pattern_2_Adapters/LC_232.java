@@ -1,4 +1,4 @@
-package Stack_Questions;
+package Stack_Questions.Pattern_2_Adapters;
 
 import java.util.Stack;
 

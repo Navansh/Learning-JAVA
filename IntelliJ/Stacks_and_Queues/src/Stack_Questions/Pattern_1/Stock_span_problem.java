@@ -19,6 +19,8 @@ public class Stock_span_problem {
             while (!unsolved_Stack.isEmpty() && arr[i] > arr[unsolved_Stack.peek()]) {
                 //means this can be an ans for the the peeked ele of the stack
                 //so make it the ans
+
+                //***************DIFFERENT for this ques********
                 int difference = unsolved_Stack.peek() - i;
                 ans[unsolved_Stack.peek()] = difference;
                 unsolved_Stack.pop();
