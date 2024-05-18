@@ -1,4 +1,4 @@
-package Stack_Questions;
+package Questions.Stack_Questions;
 
 public class Leetcode_1704_halvesAreAlike {
     public static void main(String[] args) {
