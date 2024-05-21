@@ -22,7 +22,10 @@ public class Merge_Sort {
     }
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummyHead = new ListNode();
+        //this will represent the head of the merged LL
         ListNode tail = dummyHead;
+        //this will represent the tail of the merged LL, which we'll
+        //keep on changing on every insertion
 
         while(list1!=null && list2!=null){
             if(list1.val<=list2.val){
@@ -45,8 +48,11 @@ public class Merge_Sort {
             list2 = list2.next;
             tail=tail.next;
         }
-        tail.next = list1!=null ? list1 : list2;
+        tail.next = null;
         return dummyHead.next;
+        //dummyhead.next return kar rhe as start mein null se initialize kiya tha
+        //isko, so iska next jahaan se hamaari Original merge LL start ho rhi
+        //woh return karenge
 
     }
     public ListNode middleNode(ListNode head) {
