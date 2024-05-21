@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 //class ListNode {
 //    int val;

@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class Leetcode_25_Reverse_nodes_in_k_grp {
     public ListNode reverseKGroup(ListNode head, int k) {

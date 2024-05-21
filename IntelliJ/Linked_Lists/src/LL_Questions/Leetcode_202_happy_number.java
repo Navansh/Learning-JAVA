@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class Leetcode_202_happy_number {
 

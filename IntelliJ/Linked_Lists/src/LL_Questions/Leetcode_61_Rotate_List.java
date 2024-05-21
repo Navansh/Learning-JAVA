@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class Leetcode_61_Rotate_List {
     public ListNode rotateRight(ListNode head, int k) {

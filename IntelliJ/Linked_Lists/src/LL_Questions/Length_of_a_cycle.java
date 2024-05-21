@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class Length_of_a_cycle {
     public int LengthCycle(ListNode head) {

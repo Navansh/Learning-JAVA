@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 //https://leetcode.com/problems/middle-of-the-linked-list/
 //class ListNode {
 //    int val;

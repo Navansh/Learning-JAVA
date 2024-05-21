@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class Leetcode_143_Reorder_List {
     public static void main(String[] args) {

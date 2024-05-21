@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 /**
  * This is for JAVADoc

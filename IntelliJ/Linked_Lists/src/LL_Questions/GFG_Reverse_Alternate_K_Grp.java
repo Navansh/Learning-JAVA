@@ -1,4 +1,4 @@
-package Stack_Questions;
+package LL_Questions;
 
 public class GFG_Reverse_Alternate_K_Grp {
     public ListNode reverseKGroup(ListNode head, int k) {
