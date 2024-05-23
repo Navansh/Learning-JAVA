@@ -11,6 +11,25 @@ public class DLL {
         }
         head = node;
     }
+
+    public Node delete(Node head, Node d) {
+        //here we are given a node ( not head or tail )
+        //which we need to delete and return its value
+
+
+        //find the Node - 1 node
+        //and find the Node + 1 node
+        Node dm1 = d.prev;
+        Node dp1 = d.next;
+
+        dm1.next = dp1;
+        dp1.prev = dm1;
+
+        d.next = null;
+        d.prev = null;
+
+        return d;
+    }
     public void display(){
         Node node = head;
         while (node != null){
@@ -51,6 +70,14 @@ public class DLL {
         temp.next = node;
         node.prev = temp;
 
+    }
+    public void insertBeforeTail(Node head, Node tail, Node n1) {
+        //insert Node n1 before tail
+        Node beforeTail = tail.prev;
+        beforeTail.next = n1;
+        n1.next = tail;
+        n1.prev = tail.prev;
+        tail.prev = n1;
     }
     public void insertAfter(int after, int value){
         //int value -> value of node that we want to insert after 'p' node
