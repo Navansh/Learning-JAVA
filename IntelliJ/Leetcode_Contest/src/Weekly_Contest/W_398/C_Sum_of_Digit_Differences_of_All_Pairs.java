@@ -13,7 +13,9 @@ public class C_Sum_of_Digit_Differences_of_All_Pairs {
 
         int digitLength = String.valueOf(nums[0]).length();
 
-        int[][] pos = new int[nums[0]][]
+        int[][] pos = new int[nums[0]][0];
+
+        return 0;
     }
 
     public long sumDigitDifferences(int[] nums) {
