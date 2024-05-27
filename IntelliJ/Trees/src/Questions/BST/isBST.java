@@ -37,10 +37,16 @@ public class isBST {
         }
 
         //now check the siblings if they exist
-        boolean left = BSTChecker(min,root.left, root.val - 1);
-        boolean right = BSTChecker(root.val + 1, root.right, max);
-
+        boolean left = BSTChecker(min,root.left, (long)root.val - 1);
+        boolean right = BSTChecker((long)root.val + 1, root.right, max);
+        //as root.val is int, so int + 1 will give int which will then
+        //be given to function call
         return left && right;
+        //this is analogous to :
+        // if(l==false || r == false){
+        //            return false;
+        //        }
+        //        return true;
 
     }
 }
