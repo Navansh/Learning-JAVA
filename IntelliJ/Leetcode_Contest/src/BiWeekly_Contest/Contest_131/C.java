@@ -6,6 +6,7 @@ public class C {
     }
 
     public static int[] queryResults(int limit, int[][] queries) {
-
+        int[] a = new int[5];
+        return a;
     }
 }

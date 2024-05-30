@@ -15,6 +15,7 @@ public class Inorder_Successor_in_BST {
     }
 
     public Node inorderSuccessor(Node root,Node x){
+        //if no successor exist it will automatically return null
         Node temp = null;
 
         while (root != null) {
