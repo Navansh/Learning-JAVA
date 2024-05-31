@@ -7,6 +7,29 @@ public class LC_1608 {
 
     }
 
+    public static int specialArrayOptimized(int[] nums) {
+        int n = nums.length;
+        int count = 0;
+        int[] freq = new int[n + 1];
+        //0,0,3,6,4,4
+        for (int el : nums) {
+            freq[Math.min(n, el)]++;
+            //we're doing this because our ans can only be in the range of 1 to n
+            //both inclusive, now if any ele in our array is greater than n
+            //then for our freq array, we count it as greater than n,
+            //and hence increase its freq as anyways the ans is gonna 
+        }
+
+        for (int i = n; i >= 1; i--) {
+            //hence this loop will check for all the numbers, present in the array
+            //as well as those are not present
+            count += freq[i];
+            if (count == i) return i;
+        }
+
+        return -1;
+    }
+
     public static int specialArray(int[] nums) {
         int i = 0;
         int prev = -1;
