@@ -26,6 +26,7 @@
       <module fileurl="file://$PROJECT_DIR$/String and String Builder/String and String Builder.iml" filepath="$PROJECT_DIR$/String and String Builder/String and String Builder.iml" />
       <module fileurl="file://$PROJECT_DIR$/TreeMap/TreeMap.iml" filepath="$PROJECT_DIR$/TreeMap/TreeMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/Trees/Trees.iml" filepath="$PROJECT_DIR$/Trees/Trees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trie/Trie.iml" filepath="$PROJECT_DIR$/Trie/Trie.iml" />
     </modules>
   </component>
 </project>
