@@ -20,5 +20,7 @@ public class No_of_steps_to_reduce_to_1 {
                 continue;
             }
         }
+
+        return -1;
     }
 }
