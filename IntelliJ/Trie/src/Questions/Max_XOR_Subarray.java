@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Max_XOR_Subarray {
     public static void main(String[] args) {
         int[] arr = {9,5,3};
+        //https://www.geeksforgeeks.org/problems/maximum-xor-subarray--141631/1
         System.out.println(maxSubarrayXOR(5,arr));
     }
 
