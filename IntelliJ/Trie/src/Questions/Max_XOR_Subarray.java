@@ -37,6 +37,8 @@ public class Max_XOR_Subarray {
         for (int i = 1; i <= arr.length; i++) {
             prefixXor[i] = prefixXor[i - 1] ^ arr[i - 1];
 
+
+
         }
 
         return max_xor(prefixXor, N);
