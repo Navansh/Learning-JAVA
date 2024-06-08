@@ -2,7 +2,9 @@ package Questions.Segment_Tree;
 
 public class Segment_Tree {
     public static void main(String[] args) {
-
+        int[] data = {3,8,6,7,-2,-8,4,9};
+        segmentTree(data);
+        System.out.println(query(1,6));
     }
 
     private static class SegmentNode {
@@ -56,7 +58,7 @@ public class Segment_Tree {
         return queryTree(root, startIndex, endIndex);
     }
 
-    private static int queryTree(SegmentNode root, int startIndex, int endIndex) {
+    public static int queryTree(SegmentNode root, int startIndex, int endIndex) {
         if(root.startInterval >= startIndex && root.endInterval <= endIndex) {
             //node is completely lying inside the query
             return root.data;
@@ -69,19 +71,38 @@ public class Segment_Tree {
         }
     }
 
-    public void update(int index, int value) {
+    public void update(SegmentNode root, int index, int value) {
+        root.data = updateTree(root, index, value);
+    }
+
+    public int updateTree(SegmentNode node, int index, int value) {
         //for the given index, update the value that is present with the passed value
 
         //first check if the given index is within the range of the tree
-        if(index >= root.startInterval && index <= root.endInterval) {
-            if(index == root.startInterval && index == root.endInterval) {
+        if(index >= node.startInterval && index <= node.endInterval) {
+            if(index == node.startInterval && index == node.endInterval) {
                 //means we are at the leaf node, which contains just our targetIndex
                 //and this is where we update the value of the node, so that its
                 //updated in the entire tree
 
-                root.data = value;
+                node.data = value;
+            } else {
+                //meaning we are in the range and yet to find the leaf node
+                //but the range contains our target index
+                int leftAns = updateTree(node.left,index, value);
+                int rightAns = updateTree(node.right,index, value);
 
+                node.data = leftAns + rightAns;
+                return node.data;
             }
         }
+
+        //this is the case when its totally out of bounds from the range
+        //of the node
+        //hence this node's value won't change even if we update the value
+        //of the given target index
+
+        //hence just return the original value
+        return node.data;
     }
 }
