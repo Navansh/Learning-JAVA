@@ -1,6 +1,6 @@
 package Array_Questions.SubArrays;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Subarrays_Sums_Divisible_by_K {
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class Subarrays_Sums_Divisible_by_K {
         //this will help us capture subarrays that start from 0th index
         int sum = 0;
         int rem = 0;
+
 
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
