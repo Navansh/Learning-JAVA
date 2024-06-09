@@ -93,7 +93,7 @@ public class AVL_Tree {
     private static AVLNode leftRotate(AVLNode node) {
         //we'll get the child node here
         AVLNode parent = node.right;
-        AVLNode t2 =parent.left;
+        AVLNode t2 = parent.left;
 
         parent.left = node;
         node.right = t2;
