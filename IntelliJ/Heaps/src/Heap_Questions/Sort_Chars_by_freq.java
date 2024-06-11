@@ -1,4 +1,4 @@
-package Stack_Questions;
+package Heap_Questions;
 
 import java.util.*;
 

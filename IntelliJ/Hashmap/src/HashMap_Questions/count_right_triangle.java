@@ -67,6 +67,9 @@ public class count_right_triangle {
             int countX = fx.get(x[i]);
             int countY = fy.get(y[i]);
             //here we got the freq
+            //hence har kisi point par jaakar usko 90 deg waala
+            //point consider kar rhe and uske respect mein
+            //baaki right angles form kar rhe
 
             ans = ans + (countX - 1) * (countY - 1);
             // -1 because jis point par 90 deg assume kar rhe woh point thodi
