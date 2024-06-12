@@ -82,9 +82,9 @@ public class Grid_Illumination {
                 //hence check if they are out of bound
                 if(x >= 0 && x < n && y >= 0 && y < n && lPos.containsKey(x*n + y)) {
                     //check if the given coordinate is in bound or not
-                    //and secondly if it has a lamp or not
+                    //and secondly if it has lamp(s) or not
                     //as then only ye cell useful hai
-                    //then remove all the lamps at this cell
+                    //then remove all the lamp(s) at this cell
                     int times = lPos.get(x*n + y);
                     //x * n + y is the linear position for the 2d cell
                     //we first get how many lamps are present at that cell
