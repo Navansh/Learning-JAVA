@@ -10,6 +10,10 @@ public class Subarray_Sum_Equals_K {
     public int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> hx = new HashMap<>();
         hx.put(0 ,1);
+        //this handles the case when the number (the prefixSum )
+        //itself becomes equal to k
+        //which means handling the case where the subarray starts
+        //from 0th index
         
         //now start iterating the array and find eligible start 
         //points for the given end points
