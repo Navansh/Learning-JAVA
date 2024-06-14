@@ -4,7 +4,9 @@ import java.util.HashMap;
 
 public class Subarray_Sum_Equals_K {
     public static void main(String[] args) {
-
+        //another variation of this is when k is given
+        //https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
+        //https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
     }
 
     public int subarraySum(int[] nums, int k) {
