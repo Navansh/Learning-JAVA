@@ -1,11 +1,44 @@
 package HashMap_Questions;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class HashMap_Construction {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        HashMap<String, Integer> map = new HashMap();
 
+        String str = br.readLine();
+        while (!str.equals("quit")) {
+            if (str.startsWith("put")) {
+                String[] parts = str.split(" ");
+                String key = parts[1];
+                Integer val = Integer.parseInt(parts[2]);
+                map.put(key, val);
+            } else if (str.startsWith("get")) {
+                String[] parts = str.split(" ");
+                String key = parts[1];
+                System.out.println(map.get(key));
+            } else if (str.startsWith("containsKey")) {
+                String[] parts = str.split(" ");
+                String key = parts[1];
+                System.out.println(map.containsKey(key));
+            } else if (str.startsWith("remove")) {
+                String[] parts = str.split(" ");
+                String key = parts[1];
+                System.out.println(map.remove(key));
+            } else if (str.startsWith("size")) {
+                System.out.println(map.size());
+            } else if (str.startsWith("keyset")) {
+                System.out.println(map.keyset());
+            } else if (str.startsWith("display")) {
+                map.display();
+            }
+            str = br.readLine();
+        }
     }
 
     public static class HashMap<K, V> {
@@ -205,6 +238,19 @@ public class HashMap_Construction {
             index = index % buckets.length;
             return index;
         }
+
+        public void display() {
+            System.out.println("Display Begins");
+            for (int bi = 0; bi < buckets.length; bi++) {
+                System.out.print("Bucket" + bi + " ");
+                for (HMNode node : buckets[bi]) {
+                    System.out.print( node.Key + "@" + node.Value + " ");
+                }
+                System.out.println(".");
+            }
+            System.out.println("Display Ends");
+        }
+
 
 
     }
