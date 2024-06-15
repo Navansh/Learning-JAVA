@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class HashMap_Construction {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         HashMap<String, Integer> map = new HashMap();
 
@@ -201,12 +201,11 @@ public class HashMap_Construction {
 
         private int findInBucket(int bucketIndex, K key) {
             int dataIndex = 0;
-            for(HMNode n: buckets[bucketIndex]) {
+            for(HMNode n: buckets[bucketIndex]) { // O(2) in avg case
                 if(n.Key.equals(key)) {
                     //as we're doing generic thing and for string
                     //it is advisable to use .equals, so we're
                     //using .equals for all
-
 
                     //then key already present
                     return dataIndex;
@@ -250,8 +249,5 @@ public class HashMap_Construction {
             }
             System.out.println("Display Ends");
         }
-
-
-
     }
 }
