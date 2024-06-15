@@ -17,9 +17,9 @@ public class Longest_Subarray_with_Sum_K {
             //to handle the case where the longest subarray starts
             //from the 0th index, we first check and put the 0 as prefixSum
             //at 0th index and then add
-            //essentalli we are adding the prefixSum till index - 1
+            //essentially we are adding the prefixSum till index - 1
             //when we are at index
-            //this let's us directly ask for this prefixSum
+            //this lets us directly ask for this prefixSum
             //when we query for it using the sumReq, as that sumReq is
             //prefix[startPoint - 1], which we are directly storing
             //hence we just return index and not index + 1
