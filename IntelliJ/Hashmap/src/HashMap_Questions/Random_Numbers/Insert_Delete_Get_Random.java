@@ -34,6 +34,7 @@ public class Insert_Delete_Get_Random {
                 //and the index it will be added is the last index
                 //of arrList
                 int index = arrList.size();
+                //as arrList.size() - 1 par toh element hai hi abhi
                 arrList.add(val);
                 hx.put(val, index);
                 return true;
@@ -62,13 +63,14 @@ public class Insert_Delete_Get_Random {
             //now swap the element at this index with the ele
             //at the last index
 
-            int newEle = arrList.get(arrList.size() - 1);
+            int lastEle = arrList.get(arrList.size() - 1);
             //now we get the number at the last index
 
             swap(arrList, removeIndex, arrList.size() - 1);
             arrList.remove(arrList.size() - 1);
 
-            hx.put(newEle, removeIndex);
+            //now update the position of lastElement in the HashMap
+            hx.put(lastEle, removeIndex);
             return true;
         }
 
