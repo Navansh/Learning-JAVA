@@ -66,6 +66,15 @@ public class Insert_Delete_Get_Random_w_Duplicates {
                 if(remIndex == arrList.size() - 1) {
                     //then just remove
                     arrList.remove(remIndex);
+                    //there can be a case, when we do this
+                    //the hashset becomes empty
+                    if(hx.get(val).isEmpty()) {
+                        //remove the hashSet for this val
+                        //so that when we insert again
+                        //it won't just return false
+                        //because of containsKey
+                        hx.remove(val);
+                    }
                     return true;
                 }
 

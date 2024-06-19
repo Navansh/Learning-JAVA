@@ -1,4 +1,4 @@
-package Stack_Questions;
+package DP_Questions;
 
 import java.util.Arrays;
 

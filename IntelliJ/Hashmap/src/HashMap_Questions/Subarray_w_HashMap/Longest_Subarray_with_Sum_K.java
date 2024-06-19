@@ -4,7 +4,10 @@ import java.util.HashMap;
 
 public class Longest_Subarray_with_Sum_K {
     public static void main(String[] args) {
-
+        //https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+        int[] nums = {1, 1, 1, 1, 1, 7};
+        int k = 7;
+        System.out.println(lenOfLongSubarr(nums, 6, k));
     }
 
     public static int lenOfLongSubarr (int[] nums, int N, int k) {
