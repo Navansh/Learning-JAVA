@@ -14,7 +14,7 @@ public class UniquePaths {
     public static int uniquePaths(int m, int n) {
         //we have optimal substructure in this problem hence we can use recursion
         //we also have overlapping subproblem, so we can optimize it with DP
-        if(m - 1==0 || n -1 ==0) {
+        if(m - 1 == 0 || n - 1 == 0) {
             return 1;
             //as path toh ek hi hai, that is go right
             //as path toh ek hi hai that is go down
@@ -30,6 +30,8 @@ public class UniquePaths {
     public static int uniquePathsDP(int m, int n) {
         int[][] dp = new int[m][n];
         //m, n as we are going to use only till m - 1, n - 1
+        //as given in the ques
+
         for(int i = 0; i < m; i++) {
             Arrays.fill(dp[i], -1);
         }
@@ -39,7 +41,7 @@ public class UniquePaths {
     }
 
     private static int pathHelperDp(int[][] dp, int m, int n) {
-        if(m  - 1 ==0 || n - 1 == 0) {
+        if(m - 1 == 0 || n - 1 == 0) {
             return 1;
 
             //m-1 and n - 1 par isliye karrhe cz hamne initially m and n pass karte waqt
