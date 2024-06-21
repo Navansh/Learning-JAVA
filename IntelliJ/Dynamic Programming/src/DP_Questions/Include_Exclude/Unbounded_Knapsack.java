@@ -2,12 +2,12 @@ package DP_Questions.Include_Exclude;
 
 import java.util.Arrays;
 
-public class Zero_1_Knapsack {
+public class Unbounded_Knapsack {
     public static void main(String[] args) {
-        //https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1?itm_source=geeksforgeeks
+        //https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1?itm_source=geeksforgeeks
     }
 
-    static int knapSack(int W, int wt[], int val[], int n) {
+    static int knapSack(int N, int W, int val[], int wt[]) {
         //w-> Knapsack capacity
         int[][] dp = new int[wt.length][W + 1];
         //as har length ke liye ki saari possibilities
@@ -23,7 +23,7 @@ public class Zero_1_Knapsack {
         }
 
         return knapsackHelper(dp, W, wt, val, wt.length - 1);
-        //the last one is the ladt index, till which we need
+        //the last variable is the last index, till which we need
         //to find
         //the start point is 0 for all
     }
@@ -53,41 +53,13 @@ public class Zero_1_Knapsack {
             //still available to pick up this call
             //and hence this will ensure the remaining "w"
             //does not go negative
-            y = knapsackHelper(dp, w - wt[i], wt, val, i - 1) + val[i];
+            y = knapsackHelper(dp, w - wt[i], wt, val, i) + val[i];
+            //the only difference is that i won't reduce
+            //even after including
             //this is the cal for include
         }
 
         dp[i][w] = Math.max(x, y);
         return Math.max(x, y);
-    }
-
-    static int knapSackIterative(int W, int wt[], int val[], int n) {
-        int[][] dp = new int[wt.length][W + 1];
-
-        for (int i = 0; i < dp.length; i++) {
-            for (int j = 0; j < dp[0].length; j++) {
-                if(j == 0) {
-                    //meaning the bag capacity is 0
-                    dp[i][j] = 0;
-                } else if( i == 0) {
-                    if(j - wt[i] >= 0) {
-                        dp[i][j] = val[i];
-                    }
-                } else {
-                    dp[i][j] = dp[i - 1][j];
-                    //not picked condition, assuming we don't have enough W
-                    //hence that part (dp[i - 1][j - wt[i]]) of the recurrence relation is nullified
-                    //as picking that weight is not possible
-
-                    //to pick any weight, this condition must be true
-                    if(j - wt[i] >= 0) {
-                        //means we have enough capacity in knapsack to pick the ith weight
-                        dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - wt[i]] + val[i]) ;
-                    }
-                }
-            }
-        }
-
-        return dp[wt.length - 1][W];
     }
 }

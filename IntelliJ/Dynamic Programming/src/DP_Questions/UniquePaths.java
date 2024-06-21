@@ -41,6 +41,7 @@ public class UniquePaths {
     }
 
     private static int pathHelperDp(int[][] dp, int m, int n) {
+        //m - 1, and n - 1 are the endpoints, start pt sabke liye 0,0 hai
         if(m - 1 == 0 || n - 1 == 0) {
             return 1;
 
@@ -60,6 +61,22 @@ public class UniquePaths {
         return rightAns + downAns;
     }
 
+    public int uniquePathsIterative(int m, int n) {
+        int[][] dp = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if(i == 0|| j == 0) {
+                    dp[i][j] = 1;
+                } else {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
+            }
+        }
+
+        return dp[m - 1][n - 1];
+    }
+
     public static int uniquePathsWithBlockade(int[][] dp, int m, int n) {
         //this is a special case, in which a blockade matrix is given
         //in which there are 0 and 1 values assigned to cells, denoting that
@@ -74,6 +91,7 @@ public class UniquePaths {
         }
 
         if(m - 1 == 0 && n - 1 == 0) {
+            //as there is no blockade on 0,0
             return 1;
         }
 
