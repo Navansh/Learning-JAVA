@@ -7,6 +7,7 @@ public class Subarray_Sum_Equals_K {
         //another variation of this is when k is given
         //https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
         //https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+        //https://leetcode.com/problems/count-number-of-nice-subarrays/
     }
 
     public int subarraySum(int[] nums, int k) {
