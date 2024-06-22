@@ -10,25 +10,25 @@ public class Building_Bridges {
     class Pair implements Comparable<Pair> {
         //when we need to sort pair class we need to implement
         //Comparable<Pair>
-        int w;
-        int h;
+        int x;
+        int y;
 
         @Override
         public int compareTo(Pair o) {
-            if(this.w - o.w != 0) {
+            if(this.x - o.x != 0) {
                 //this will sort on the basis of width in increasing order
                 //only if they are not equal
-                return this.w - o.w;
+                return this.x - o.x;
             } else {
                 //f they are equal then sort on basis of height
                 //and in decreasing order
-                return o.h - this.h;
+                return o.y - this.y;
             }
         }
 
         Pair(int w, int h) {
-            this.w = w;
-            this.h = h;
+            this.x = w;
+            this.y = h;
         }
     }
 
@@ -46,7 +46,7 @@ public class Building_Bridges {
         //condition written above
         //i.e. based on width and then based on height
 
-        //now apply LIS on height of sorted array arr
+        //now apply LIS on y of sorted array arr
         int[] dp = new int[arr.length];
         int ans = 0;
 
@@ -57,7 +57,7 @@ public class Building_Bridges {
             while (lo < hi) {
                 int mid = lo + (hi - lo)/2;
 
-                if(dp[mid] < arr[i].h) {
+                if(dp[mid] < arr[i].y) {
                     //as doing based on height
                     lo = mid + 1;
                 } else {
@@ -66,7 +66,7 @@ public class Building_Bridges {
                 }
             }
 
-            dp[lo] = arr[i].h;
+            dp[lo] = arr[i].y;
 
             if(lo == ans) {
                 ans++;
