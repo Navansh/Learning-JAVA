@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Building_Bridges {
     public static void main(String[] args) {
-
+        //https://www.geeksforgeeks.org/dynamic-programming-building-bridges/
     }
 
     class Pair implements Comparable<Pair> {
