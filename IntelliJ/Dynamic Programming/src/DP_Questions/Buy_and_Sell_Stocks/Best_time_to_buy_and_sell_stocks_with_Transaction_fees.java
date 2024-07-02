@@ -18,16 +18,45 @@ public class Best_time_to_buy_and_sell_stocks_with_Transaction_fees {
         for (int i = 1; i < prices.length; i++) {
             int currentBuy = Math.max(prevBestBuyPrice, sellProfit - prices[i]);
             //getting the better one from : last time bought price net profit (being continued now )
+            //meaning jab pehle caculate hua hoga tab profit - prices[i] se hua hoga
+            //toh yaa toh woh continue karo
             //or the sell karne ke baad aaj buy karta hoon toh
+
+            //we take max because ye toh negative jaayenge, toh hamein
+            //kam negative waala chahiye
             int currentSell = Math.max(sellProfit, prices[i] + prevBestBuyPrice - fee);
             //best one is we just continue with the prev sell profit or we sell it now
             //and get the margin between prevBestbuy Price and current price
-            //and also deducting fee from it
+            //we are adding prevBestBuyPrice as woh pehle se hi negative hoga ya 0 hogaa
+            //toh at the end woh subtract hi hoga prices[i] se but agar abhi
+            //negative likh diya then woh add hojaayega
+            //and also deducting fee from it as question said ki sell karne par
+            //lagti hai
+
+            //we are taking max cz we want max profit
+
 
             prevBestBuyPrice = currentBuy;
+            //jo abhi ismein se choose kara, store that
             sellProfit = currentSell;
+            //and store this as profit
+            //can be 0 or positive
+            //negative bhi ho sakta hai
+            //agar fee jyada hogyi profit se toh
+
+            //hence this will eventually accumulate all our
+            //profit for all the txns
+
         }
 
+        //we can even count for fee while buying
+        //as long as we account for it once during the txn
+
         return sellProfit;
+    }
+
+    public int maxProfitDP(int[] prices, int fee) {
+        //TODO : recursive code
+        return -1;
     }
 }

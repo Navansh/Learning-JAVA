@@ -1,9 +1,6 @@
 package Array_Questions.Interview_Prob;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Majority_Element_2 {
     public static void main(String[] args) {
@@ -101,4 +98,6 @@ public class Majority_Element_2 {
 
         return hs.stream().toList();
     }
+
+
 }
