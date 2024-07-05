@@ -1,4 +1,4 @@
-package Stack_Questions;
+package Graph_Questions;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
