@@ -11,6 +11,9 @@ public class BFS_Traversal {
 
 
     public static void BFSTraversal(int n, int m, int[][] edges) {
+        //n -> No of nodes
+        //m -> No of edges
+
         List<List<Integer>> graph = construction(n,m,edges);
 
         Queue<Integer> q = new LinkedList<>();

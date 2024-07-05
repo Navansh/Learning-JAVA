@@ -7,9 +7,6 @@ public class DFS_Traversal {
         boolean[] vis = new boolean[55];
         //assume some length here
 //        ArrayList<Integer> ans = dfsOfGraph();
-
-
-
     }
 
     public static ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
