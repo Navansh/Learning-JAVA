@@ -1,6 +1,7 @@
+package Shortest_Path_Algos;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class Dijkstras_Algorithm {
@@ -30,13 +31,16 @@ public class Dijkstras_Algorithm {
         //no of nodes = n
 
         PriorityQueue<Pair> pq = new PriorityQueue<>();
+        //TC : we cannot have more than edges (number)
+        //in the PQ
         int[] ans = new int[n];
-        //initializing this with +infinite
+        //initializing this with + infinite
 
         Arrays.fill(ans, Integer.MAX_VALUE);
 
         pq.add(new Pair(S, 0));
         //src to src shortest path is 0
+        //hence this weight represents weight so far
 
         while (!pq.isEmpty()) {
             Pair removed = pq.remove();
