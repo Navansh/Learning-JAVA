@@ -7,6 +7,8 @@ import java.util.HashSet;
 public class Frog_Jump {
     public static void main(String[] args) {
        //https://leetcode.com/problems/frog-jump/
+
+        //****NOT Understood******
     }
 
     public boolean canCross(int[] stones) {

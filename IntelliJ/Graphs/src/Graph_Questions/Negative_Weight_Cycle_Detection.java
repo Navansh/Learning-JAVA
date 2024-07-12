@@ -14,6 +14,9 @@ public class Negative_Weight_Cycle_Detection {
         //bellman ford is one of the few algos which can be implemented
         //without explicitly constructing the graph
 
+        //wrong code given in the doc, not being submitted on GFG
+
+
         int[] ans = new int[n];
 
         Arrays.fill(ans, 100000000);
