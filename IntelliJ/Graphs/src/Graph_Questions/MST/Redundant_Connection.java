@@ -20,11 +20,11 @@ public class Redundant_Connection {
         Arrays.fill(rank, 1);
 
         //now iterate on all of the edges
-        for (int i = 0; i < edges.length; i++) {
+        for (int i = 0; i < edges.length; i++) { // O(E)
             int u = edges[i][0];
             int v = edges[i][1];
 
-            boolean res = union(u, v, parent, rank);
+            boolean res = union(u, v, parent, rank); // O(1)
 
             if(res == false) {
                 return new int[] {u, v};
@@ -32,6 +32,7 @@ public class Redundant_Connection {
         }
 
         return new int[] {-1, -1};
+        //never going to happen, but to complete the function
     }
 
     public boolean union(int x, int y, int[] parent, int[] rank) {

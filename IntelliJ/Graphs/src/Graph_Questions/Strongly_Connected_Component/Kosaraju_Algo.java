@@ -52,7 +52,7 @@ public class Kosaraju_Algo {
         boolean[] vis2 = new boolean[V];
         Stack<Integer> dummy = new Stack<>();
         while (stacker.size() > 0) {
-            int rem = stacker.remove();
+            int rem = stacker.pop();
             if(vis[rem] == false) {
                 dfs(graph2, vis2, dummy, rem);
                 count++;

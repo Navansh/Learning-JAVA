@@ -55,7 +55,7 @@ public class Prims_Algo {
                     if(vis[nbrs[i]]) {
                         continue;
                     } else {
-                        pq.add(new Pair(vis[nbrs[i]], ))
+                        //pq.add(new Pair(vis[nbrs[i]], ))
                     }
                 }
             }
@@ -64,6 +64,6 @@ public class Prims_Algo {
 
 
 
-
+        return -1;
     }
 }
