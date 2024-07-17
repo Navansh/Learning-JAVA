@@ -76,7 +76,7 @@ public class Top_View {
             maxVerticalLevel = Math.max(maxVerticalLevel, i);
         }
 
-        //now e'll iterate between these and add it to the ArrayList
+        //now we'll iterate between these and add it to the ArrayList
         ArrayList<Integer> ans = new ArrayList<>();
         for (int i = minVerticalLevel; i <= maxVerticalLevel; i++) {
             ans.add(hx.get(i));

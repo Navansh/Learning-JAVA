@@ -7,12 +7,15 @@ public class Articulation_Point {
     public static void main(String[] args) {
 
     }
+
+
     boolean[] vis;
     int[] low;
     int[] discovery;
     int time = 0;
     ArrayList<Integer> lx = new ArrayList<>();
     boolean[] ans;
+
     public ArrayList<Integer> articulationPoints(int V,ArrayList<ArrayList<Integer>> adj) {
         vis = new boolean[V];
         low = new int[V];

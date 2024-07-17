@@ -5,8 +5,7 @@ public class Lowest_Common_Ancestor {
 
     }
 
-    class Node
-    {
+    class Node {
         int data;
         Node left, right;
 

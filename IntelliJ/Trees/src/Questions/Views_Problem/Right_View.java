@@ -23,9 +23,11 @@ public class Right_View {
         //HERE MIN LENGTH GIVEN IN PROBLEM IS 1, so not doing it here
 
         ArrayList<Integer> arrList = new ArrayList<>();
+
         if(root == null) {
             return arrList;
         }
+
         Queue<Node> qx = new LinkedList<>();
         qx.add(root);
 

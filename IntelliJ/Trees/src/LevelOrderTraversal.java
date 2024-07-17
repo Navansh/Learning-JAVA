@@ -8,7 +8,7 @@ public class LevelOrderTraversal {
 
     }
 
-    public void levelOrderWithSeperatePrint( Node root) {
+    public void levelOrderWithSeperatePrint(Node root) {
         Queue<Node> queuer = new LinkedList<>();
         queuer.add(root);
 
@@ -18,6 +18,9 @@ public class LevelOrderTraversal {
             //you are present
 
             while( n > 0) {
+                //this loop is just for segregating b/w diff level
+                //we can remove this also if we don't want this functionality
+
                 Node temp = queuer.remove();
                 System.out.print(temp.val + " ");
 
