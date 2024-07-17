@@ -12,9 +12,10 @@ public class Shortest_Path_from_Node_to_Another_Node_in_BST {
           this.left = left;
           this.right = right;
       }
- }
+    }
     public static void main(String[] args) {
-
+        //https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/description/?envType=daily-question&envId=2024-07-16
+        //LCA Solution Due
     }
 
     public String getDirections(TreeNode root, int startValue, int destValue) {

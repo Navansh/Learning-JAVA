@@ -14,6 +14,7 @@ public class Bridges_Ques {
     int[] discovery;
     int time = 0;
     List<List<Integer>> lx = new ArrayList<>();
+
     public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
         //src is 0
         vis = new boolean[n];
