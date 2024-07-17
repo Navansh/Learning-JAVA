@@ -21,8 +21,20 @@ public class Bridges_Ques {
         low = new int[n];
         discovery = new int[n];
 
+        //form the adjacency matrix first
+        List<List<Integer>> graph = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
+        }
 
-        bridges(connections, n, 0, -1);
+        for (List<Integer> connection : connections) {
+            int u = connection.get(0);
+            int v = connection.get(1);
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+        bridges(graph, n, 0, -1);
+
         //initially the parent is -1
         //as we reached this 0 from no where
 
