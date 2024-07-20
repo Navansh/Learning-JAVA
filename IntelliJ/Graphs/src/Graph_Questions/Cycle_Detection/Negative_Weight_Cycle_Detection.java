@@ -1,4 +1,4 @@
-package Graph_Questions;
+package Graph_Questions.Cycle_Detection;
 
 import java.util.ArrayList;
 import java.util.Arrays;

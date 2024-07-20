@@ -1,4 +1,4 @@
-package Graph_Questions.MST;
+package Graph_Questions.DSU;
 
 import java.util.Arrays;
 

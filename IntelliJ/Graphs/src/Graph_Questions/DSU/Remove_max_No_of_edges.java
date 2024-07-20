@@ -122,7 +122,7 @@ public class Remove_max_No_of_edges {
         } else {
             parent[parentOfX] = parentOfY;
             //merge anyways and jisko leader bana rhe uska ++
-            parent[parentOfY]++;
+            rank[parentOfY]++;
         }
 
         return true;

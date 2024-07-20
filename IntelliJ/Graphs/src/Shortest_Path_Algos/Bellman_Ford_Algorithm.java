@@ -16,6 +16,8 @@ public class Bellman_Ford_Algorithm {
         int[] ans = new int[n];
         int[] ansForNegativeWeightCycle = new int[1];
         ansForNegativeWeightCycle[0] = -1;
+        //this is added cz question says that there can be negative weight cycles present
+
 
         Arrays.fill(ans, 100000000);
         //ques told to do this, otherwise we could also use
@@ -28,7 +30,7 @@ public class Bellman_Ford_Algorithm {
         for (int i = 0; i < n - 1; i++) {
             //no of iterations = n - 1,
             //as we're starting from 0 toh i < n - 1 kar rhe
-
+            //0 -> n - 2 = n - 1 iterations
             //for each iteration we visit all the edges
             for(ArrayList<Integer> arx : edges) {
                 int u = arx.get(0);

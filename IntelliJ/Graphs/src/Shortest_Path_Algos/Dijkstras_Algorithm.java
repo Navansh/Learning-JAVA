@@ -34,9 +34,11 @@ public class Dijkstras_Algorithm {
         //TC : we cannot have more than edges (number)
         //in the PQ
         int[] ans = new int[n];
-        //initializing this with + infinite
+        //initializing this with +infinite
 
         Arrays.fill(ans, Integer.MAX_VALUE);
+        //to signify that this value has been filled previously
+        //modified or not
 
         pq.add(new Pair(S, 0));
         //src to src shortest path is 0
@@ -46,6 +48,7 @@ public class Dijkstras_Algorithm {
             Pair removed = pq.remove();
             if(ans[removed.vertex] != Integer.MAX_VALUE) {
                 continue;
+                //then this is already set to its lowest value
             } else {
                 //this condition will run for the first time
                 //we are updating this value for this node

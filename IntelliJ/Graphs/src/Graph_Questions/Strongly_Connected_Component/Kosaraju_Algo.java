@@ -18,9 +18,7 @@ public class Kosaraju_Algo {
         //we do dfs till everything is visited
         //and store the vertex in stack while coming back
         for (int i = 0; i < V; i++) {
-            if(vis[i]) {
-                continue;
-            } else {
+            if(!vis[i]) {
                 dfs(adj, vis, stacker, i);
             }
         }
@@ -34,7 +32,15 @@ public class Kosaraju_Algo {
             graph2.add(temp);
         }
 
-        for (int i = 0; i < adj.size(); i++) {
+        for (int i = 0; i < V; i++) {
+            for(int nbr : adj.get(i)) {
+                graph2.get(nbr).add(i);
+                //to form the opposite vertices we're doing
+                //this
+                //otherwise would've done
+                //graph2.get(i).add(nbr);
+            }
+            /*
             ArrayList<Integer> nbrs = adj.get(i);
             int u = i;
             for (int j = 0; j < nbrs.size(); j++) {
@@ -42,6 +48,7 @@ public class Kosaraju_Algo {
                 ArrayList<Integer> getto = graph2.get(j);
                 getto.add(u);
             }
+             */
         }
 
         //Step 3 :
@@ -51,9 +58,9 @@ public class Kosaraju_Algo {
 
         boolean[] vis2 = new boolean[V];
         Stack<Integer> dummy = new Stack<>();
-        while (stacker.size() > 0) {
+        while (!stacker.isEmpty()) {
             int rem = stacker.pop();
-            if(vis[rem] == false) {
+            if(!vis2[rem]) {
                 dfs(graph2, vis2, dummy, rem);
                 count++;
             }

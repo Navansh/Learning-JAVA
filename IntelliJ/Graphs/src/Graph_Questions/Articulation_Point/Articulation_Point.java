@@ -33,6 +33,10 @@ public class Articulation_Point {
             }
         }
 
+        if(lx.size() == 0) {
+            lx.add(-1);
+        }
+
         return lx;
     }
 
@@ -43,7 +47,12 @@ public class Articulation_Point {
         //this will be updated in the future
         //as the lowest discovery point will be the node itself
         //or someone before it
+        vis[src] = true;
         time++;
+
+        int count = 0;
+        // for check how many calls from actual source
+
 
         List<Integer> nbrs = graph.get(src);
 
@@ -57,15 +66,20 @@ public class Articulation_Point {
                 //if its not parent and also not visited
 
                 //so mark this visited and go to this
-                vis[nbr] = true;
+                count++;
                 bridges(graph, n, nbr, src);
                 //what this function helps create is the low array
                 low[src] = Math.min(low[src], low[nbr]);
                 //this means if my nbr can visit that, I can visit that too
                 //so update the src low point
-                if(low[nbr] >= discovery[src]) {
-                    //then the src is an articulation point
-                    ans[src] = true;
+                if(parent == -1) {
+                    if(count >= 2) {
+                        ans[src] = true;
+                    }
+                } else {
+                    if(low[nbr] >= discovery[src]) {
+                        ans[src] = true;
+                    }
                 }
             } else {
                 //vis[nbr] = true waala case

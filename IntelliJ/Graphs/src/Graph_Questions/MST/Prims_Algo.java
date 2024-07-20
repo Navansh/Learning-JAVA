@@ -1,6 +1,8 @@
 package Graph_Questions.MST;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -10,11 +12,11 @@ public class Prims_Algo {
     }
 
     static class Pair implements Comparable<Pair> {
-        int node;
+        int vertex;
         int weight;
 
         Pair(int node, int weight) {
-            this.node = node;
+            this.vertex = node;
             this.weight = weight;
         }
 
@@ -27,43 +29,38 @@ public class Prims_Algo {
     static int spanningTree(int V, int E, List<List<int[]>> adj) {
         PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
 
-        int ans = 0;
         boolean[] vis = new boolean[V];
+        //cyclicity is removed using this vis array
 
-        List<int[]> edges = new ArrayList<>();
-        for (int u = 0; u < V; u++) {
-            for (int[] edge : adj.get(u)) {
-                int v = edge[0];
-                int wt = edge[1];
-                edges.add(new int[]{u, v, wt});
-            }
-        }
 
-        pq.add(new Pair(0 , 0));
+        pq.add(new Pair(0,0));
         //this is the src we're adding
 
-        while (pq.size() > 0) {
-            Pair rem = pq.remove();
+        int finalCost = 0;
 
-            if(!vis[rem.node]) {
-                vis[rem.node] = true;
-                ans += rem.weight;
+        while (!pq.isEmpty()) {
+            Pair curr = pq.poll();
+            //if unable to remove poll gives null exception
+            //whereas remove gives exception
 
-                int[] nbrs = edges.get(rem.node);
+            if(vis[curr.vertex]) {
+                continue;
+                //as we don't want to form any cycle
+            }
 
-                for (int i = 0; i < nbrs.length; i++) {
-                    if(vis[nbrs[i]]) {
-                        continue;
-                    } else {
-                        //pq.add(new Pair(vis[nbrs[i]], ))
-                    }
+            vis[curr.vertex] = true;
+            finalCost+= curr.weight;
+
+            for (int[] nbr : adj.get(curr.vertex)) {
+                int dest = nbr[0];
+                int wt = nbr[1];
+                if(!vis[dest]) {
+                    pq.add(new Pair(dest, wt));
                 }
             }
+
         }
 
-
-
-
-        return -1;
+        return finalCost;
     }
 }

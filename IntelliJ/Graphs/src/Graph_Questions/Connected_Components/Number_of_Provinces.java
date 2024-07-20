@@ -1,4 +1,4 @@
-package Graph_Questions;
+package Graph_Questions.Connected_Components;
 
 import java.util.ArrayList;
 
