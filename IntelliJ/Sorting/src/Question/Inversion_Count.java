@@ -9,8 +9,7 @@ public class Inversion_Count {
 
     }
     static long ans;
-    static long inversionCount(long arr[], long N)
-    {
+    static long inversionCount(long arr[], long N) {
         ans = 0;
         mergeSort(arr,0,arr.length-1);
         return ans;

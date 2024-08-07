@@ -2,13 +2,11 @@ package Question;
 
 public class Leetcode_287_Find_Duplicate
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int[] nums = {1,3,4,2,2};
         System.out.println(findDuplicate2(nums));
     }
-    public static int findDuplicate(int[] nums)
-    {
+    public static int findDuplicate(int[] nums) {
         int j = 0;
 //        for (int i = 0; i < nums.length; i++)
 //        //we will only move the i forwards when it is at its correct index
@@ -65,8 +63,7 @@ public class Leetcode_287_Find_Duplicate
 
         return -1;
     }
-    public static void Swap(int[] arr,int first,int second)
-    {
+    public static void Swap(int[] arr,int first,int second) {
         int temp = arr[first];
         arr[first]=arr[second];
         arr[second] = temp;

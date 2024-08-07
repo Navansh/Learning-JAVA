@@ -5,13 +5,11 @@ import java.util.Arrays;
 //https://leetcode.com/problems/missing-number/
 public class Leetcode_268_Missing_No
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
        int[] nums = {9,6,4,2,3,5,7,0,1};
        System.out.println(missingNumber(nums));
     }
-    public static int missingNumber(int[] nums)
-    {
+    public static int missingNumber(int[] nums) {
         int j = 0;
 //        for (int i = 0; i < nums.length; i++)
 //        //we will only move the i forwards when it is at its correct index

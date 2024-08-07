@@ -6,11 +6,9 @@ public class Leetcode_41_First_Missing_Poitive
     {
 
     }
-    public static int firstMissingPositive(int[] nums)
-    {
+    public static int firstMissingPositive(int[] nums) {
         int j = 0;
-        while (j < nums.length)
-        {
+        while (j < nums.length) {
             int correct_index= nums[j]-1;
             if (nums[j] > 0 && nums[j]<=nums.length && nums[j]!=nums[correct_index])
             {
@@ -29,8 +27,7 @@ public class Leetcode_41_First_Missing_Poitive
         return nums.length+1;
     }
 
-    public static void Swap(int[] arr,int first,int second)
-    {
+    public static void Swap(int[] arr,int first,int second) {
         int temp = arr[first];
         arr[first]=arr[second];
         arr[second] = temp;

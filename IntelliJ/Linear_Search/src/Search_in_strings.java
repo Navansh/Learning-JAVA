@@ -2,8 +2,7 @@ import java.util.Arrays;
 
 public class Search_in_strings
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String name = "Navansh";
         char target ='a';
 //        System.out.println(search(name,target));
@@ -23,10 +22,8 @@ public class Search_in_strings
             return false;
         }
 
-        for (char ch : str.toCharArray())
-        {
-            if (ch==target)
-            {
+        for (char ch : str.toCharArray()) {
+            if (ch==target) {
                 return true;
             }
         }

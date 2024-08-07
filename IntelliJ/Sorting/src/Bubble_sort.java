@@ -7,12 +7,10 @@ public class Bubble_sort
     BubbleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-    public static void BubbleSort(int[] arr)
-    {
+    public static void BubbleSort(int[] arr) {
         boolean swapped;
         //run the steps n-1 times for i
-        for (int i = 0; i < arr.length-1; i++)
-        {
+        for (int i = 0; i < arr.length-1; i++) {
             //ye arr.length "-1 " maine daala hai and not by kunal so agar koi error aati hai then look into it
 
             swapped = false;
@@ -27,13 +25,11 @@ public class Bubble_sort
                     swapped = true;
                 }
             }
-            if(!swapped)
-            {
+
+            if(!swapped) {
                 break;
             }
             //this means that our array is already sorted so why run it again
-
-
         }
     }
 }
